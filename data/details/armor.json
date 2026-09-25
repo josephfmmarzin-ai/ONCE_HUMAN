@@ -1,0 +1,808 @@
+{
+ "lonewolf-hat": {
+  "set": "Lonewolf",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "lonewolf-mask": {
+  "set": "Lonewolf",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "lonewolf-jacket": {
+  "set": "Lonewolf",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "lonewolf-gloves": {
+  "set": "Lonewolf",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "lonewolf-pants": {
+  "set": "Lonewolf",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "lonewolf-shoes": {
+  "set": "Lonewolf",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-hat": {
+  "set": "Shelterer",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-mask": {
+  "set": "Shelterer",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-top": {
+  "set": "Shelterer",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-gloves": {
+  "set": "Shelterer",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-pants": {
+  "set": "Shelterer",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "shelterer-shoes": {
+  "set": "Shelterer",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "bastille-helmet": {
+  "set": "Bastille",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "bastille-mask": {
+  "set": "Bastille",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "bastille-top": {
+  "set": "Bastille",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "bastille-gloves": {
+  "set": "Bastille",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "bastille-pants": {
+  "set": "Bastille",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "bastille-boots": {
+  "set": "Bastille",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "renegade-hood": {
+  "set": "Renegade",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "renegade-mask": {
+  "set": "Renegade",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "renegade-jacket": {
+  "set": "Renegade",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "renegade-gloves": {
+  "set": "Renegade",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "renegade-pants": {
+  "set": "Renegade",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "renegade-shoes": {
+  "set": "Renegade",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "falcon-cap": {
+  "set": "Falcon",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "falcon-mask": {
+  "set": "Falcon",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "falcon-jacket": {
+  "set": "Falcon",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "falcon-gloves": {
+  "set": "Falcon",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "falcon-pants": {
+  "set": "Falcon",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "falcon-shoes": {
+  "set": "Falcon",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-hood": {
+  "set": "Blackstone",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-mask": {
+  "set": "Blackstone",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-top": {
+  "set": "Blackstone",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-gloves": {
+  "set": "Blackstone",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-pants": {
+  "set": "Blackstone",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-boots": {
+  "set": "Blackstone",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "savior-helmet": {
+  "set": "Savior",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "savior-mask": {
+  "set": "Savior",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "savior-top": {
+  "set": "Savior",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "savior-gloves": {
+  "set": "Savior",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "savior-pants": {
+  "set": "Savior",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "savior-shoes": {
+  "set": "Savior",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-helmet": {
+  "set": "Stormweaver",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-mask": {
+  "set": "Stormweaver",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-top": {
+  "set": "Stormweaver",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-gloves": {
+  "set": "Stormweaver",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-pants": {
+  "set": "Stormweaver",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "stormweaver-shoes": {
+  "set": "Stormweaver",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-helmet": {
+  "set": "Treacherous Tides",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-mask": {
+  "set": "Treacherous Tides",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-top": {
+  "set": "Treacherous Tides",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-gloves": {
+  "set": "Treacherous Tides",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-pants": {
+  "set": "Treacherous Tides",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "treacherous-tides-shoes": {
+  "set": "Treacherous Tides",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-cap": {
+  "set": "Gravity Tide",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-facewear": {
+  "set": "Gravity Tide",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-top": {
+  "set": "Gravity Tide",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-gloves": {
+  "set": "Gravity Tide",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-pants": {
+  "set": "Gravity Tide",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "gravity-tide-shoes": {
+  "set": "Gravity Tide",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "agent-helmet": {
+  "set": "Agent",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "agent-mask": {
+  "set": "Agent",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "agent-top": {
+  "set": "Agent",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "agent-gloves": {
+  "set": "Agent",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "agent-pants": {
+  "set": "Agent",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "agent-shoes": {
+  "set": "Agent",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-helmet": {
+  "set": "Heavy Duty",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-mask": {
+  "set": "Heavy Duty",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-top": {
+  "set": "Heavy Duty",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-gloves": {
+  "set": "Heavy Duty",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-pants": {
+  "set": "Heavy Duty",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "heavy-duty-shoes": {
+  "set": "Heavy Duty",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blast-helmet": {
+  "set": "Blast",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blast-mask": {
+  "set": "Blast",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blast-top": {
+  "set": "Blast",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blast-gloves": {
+  "set": "Blast",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blast-pants": {
+  "set": "Blast",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blast-shoes": {
+  "set": "Blast",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "raid-helmet": {
+  "set": "Raid",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "raid-mask": {
+  "set": "Raid",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "raid-top": {
+  "set": "Raid",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "raid-gloves": {
+  "set": "Raid",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "raid-pants": {
+  "set": "Raid",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "raid-shoes": {
+  "set": "Raid",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "scout-hood": {
+  "set": "Scout",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "scout-mask": {
+  "set": "Scout",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "scout-jacket": {
+  "set": "Scout",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "scout-gloves": {
+  "set": "Scout",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "scout-pants": {
+  "set": "Scout",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "scout-survival-shoes": {
+  "set": "Scout",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-hood-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-mask-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-top-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-gloves-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-pants-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-boots-cold": {
+  "set": "Blackstone (Cold)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-hood-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-mask-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-top-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-gloves-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-pants-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "blackstone-boots-heat": {
+  "set": "Blackstone (Heat)",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-helmet": {
+  "set": "Snow Panther",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-mask": {
+  "set": "Snow Panther",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-top": {
+  "set": "Snow Panther",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-gloves": {
+  "set": "Snow Panther",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-pants": {
+  "set": "Snow Panther",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snow-panther-boots": {
+  "set": "Snow Panther",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "rustic-hat": {
+  "set": "Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "rustic-jacket": {
+  "set": "Rustic",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "rustic-gloves": {
+  "set": "Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "rustic-pants": {
+  "set": "Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "rustic-shoes": {
+  "set": "Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snowland-rustic-hat": {
+  "set": "Snowland Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snowland-rustic-jacket": {
+  "set": "Snowland Rustic",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "snowland-rustic-gloves": {
+  "set": "Snowland Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snowland-rustic-pants": {
+  "set": "Snowland Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "snowland-rustic-shoes": {
+  "set": "Snowland Rustic",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "bbq-gloves": {
+  "effect": "La fréquence des dégâts de Burn augmente avec le nombre de stacks, jusqu'à +100%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Burn damage frequency increases with the number of stacks, up to 100%"
+ },
+ "beret": {
+  "effect": "Shrapnel touche 1 partie du corps supplémentaire.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Shrapnel Hit Part +1"
+ },
+ "cage-helmet": {
+  "effect": "Nombre de déclenchements de Shrapnel +1.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Shrapnel Trigger Count +1"
+ },
+ "charmed-mag-top": {
+  "effect": "En statut Fast Gunner, moins il reste de munitions dans le chargeur, plus la chance de tirer une balle supplémentaire est élevée (40% à 1% de munitions).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When in Fast Gunner status, the less ammo in the magazine, the higher the chance of firing an extra bullet per shot. At 1% ammo, the chance is 40%"
+ },
+ "cowboy-boots": {
+  "effect": "Fortress Warfare n'affecte que toi. Dans Fortress Warfare, Attaque +25%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Fortress Warfare only affects self. When in Fortress Warfare, Attack +25%"
+ },
+ "doyens-cloak": {
+  "effect": "Quand l'effet Frozen (gelé) se termine, inflige des dég de Frost égaux à 50% des dégâts totaux infligés à la cible pendant le gel.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When the Frozen effect ends, deal Frost DMG equal to 50% of the total DMG you dealt to the target during the Frozen period"
+ },
+ "drifter-gauntlets": {
+  "effect": "Quand tu subis Burn, dég d'arme +15% et taux crit +15%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When affected by Burn, Weapon DMG +15% and Crit Rate +15%"
+ },
+ "desert-dust-mask": {
+  "effect": "Au déclenchement de Fast Gunner, 70% de chance de recharger automatiquement 1 balle, les balles rechargées gagnant +20% d'attaque.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When triggering Fast Gunner, 70% chance to automatically reload 1 bullet, with reloaded bullets gaining 20% attack"
+ },
+ "earthly-boots": {
+  "effect": "Dég +30% contre les ennemis marqués (The Bull's Eye).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When hitting marked enemies, DMG +30%"
+ },
+ "explosive-front-top": {
+  "effect": "Délai d'Unstable Bomber +0,3 s et dég d'Unstable Bomber +30%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Unstable Bomber delay +0.3s and Unstable Bomber DMG +30%"
+ },
+ "fire-rune-boots": {
+  "effect": "Quand une cible proche subit Burn, 50% de chance de générer une particule déviante ; la ramasser donne dég de Blaze +30% pendant 15 s.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When any nearby target is inflicted with Burn, 50% chance to generate a deviated particle. Picking it up increases Blaze DMG by 30% for 15s"
+ },
+ "frost-tactical-vest": {
+  "effect": "Frost Vortex génère des pics de glace infligeant des dég de Frost de 100% de l'Intensité PSI.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Frost Vortex generates Ice Spikes that deal Frost DMG of 100% Psi Intensity"
+ },
+ "gas-mask-hood": {
+  "effect": "Après déclenchement de Power Surge, taux crit +35% pendant 3 s.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "After triggering Power Surge, Crit Rate +35% for 3s"
+ },
+ "gas-tight-helmet": {
+  "effect": "Shrapnel ne touche qu'1 partie max mais dég de Shrapnel +150%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Max Shrapnel target part is 1 and Shrapnel DMG +150%"
+ },
+ "tactical-combat-boots": {
+  "effect": "Dans Fortress Warfare, recharge automatiquement 1 balle et cadence +15%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Automatically refill 1 bullet and Fire Rate +15% when in Fortress Warfare"
+ },
+ "hardy-gloves": {
+  "effect": "À stacks max, Burn provoque une explosion infligeant des dég de Blaze de 300% de l'Intensité PSI et retire tous les stacks de Burn.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "At full stack, Burn causes an explosion dealing Blaze DMG of 300% Psi Intensity and removes all Burn stacks"
+ },
+ "hot-dog-shorts": {
+  "effect": "Bounce +2 rebonds.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Bounces +2"
+ },
+ "leather-boots": {
+  "effect": "Récupère 2,5% PV/s dans Fortress Warfare (doublé sous 50% PV).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Recover 2.5% HP per second while in Fortress Warfare. Effect doubles when HP is below 50%"
+ },
+ "mayfly-goggles": {
+  "effect": "Nombre de déclenchements de Power Surge +1, dég de Power Surge -30%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Power Surge trigger count +1. Power Surge DMG -30%"
+ },
+ "oasis-mask": {
+  "effect": "Stacks max de Fast Gunner +10 et attaque +1% par stack.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Fast Gunner max stacks +10 and Attack +1% per stack"
+ },
+ "old-huntsman-boots": {
+  "effect": "Après déclenchement de The Bull's Eye, la balle suivante sur une cible marquée compte comme coup au point faible. Dég point faible +30% contre les ennemis marqués.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "After triggering The Bull's Eye, the next bullet hitting a marked target counts as a Weakspot hit. Weakspot DMG +30% to enemies affected by The Bull's Eye"
+ },
+ "overloaded-pants": {
+  "effect": "Après 20 déclenchements de Power Surge, les 6 tirs suivants consomment la réserve au lieu du chargeur et dég de Shock +20% (fenêtre 4 s).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "After triggering Power Surge 20 times, the next 6 shots consume reserve ammo instead, and Shock DMG +20%. Countdown: 4s"
+ },
+ "precise-shot-mask": {
+  "effect": "Au déclenchement de Fast Gunner, vitesse de recharge +25%, jusqu'à 10 stacks (perdu en rechargeant ou en changeant d'arme).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When triggering Fast Gunner, reload speed +25%, up to 10 stacks. Removed after reloading or switching weapons"
+ },
+ "sharp-blade-pants": {
+  "effect": "Nombre de déclenchements de Bounce +1.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Bounce Trigger Count +1"
+ },
+ "sleek-leather-jacket": {
+  "effect": "Pour chaque mètre entre toi et Unstable Bomber, dég final d'Unstable Bomber +2%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "For every 1m Unstable Bomber is away from the player, Unstable Bomber Final DMG +2%"
+ },
+ "snow-camo-gloves": {
+  "effect": "Quand un cristal de glace éclate, 4 missiles de glace supplémentaires visent les ennemis proches (dég de statut de 50% de l'Intensité PSI ; 40% contre les joueurs ; profite du bonus de Frost Vortex).",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When an Ice Crystal shatters, 4 additional ice missiles launch at nearby enemies, dealing Status DMG equal to 50% Psi Intensity (40% to players; Frost Vortex DMG bonus applies)"
+ },
+ "tactical-combat-shoes": {
+  "effect": "En touchant un ennemi marqué, 40% de chance de recharger 1 balle automatiquement et de récupérer 1% des PV perdus.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "When hitting marked enemies, 40% chance to automatically reload 1 ammo and recover 1% of lost HP"
+ },
+ "tattoo-pants": {
+  "effect": "Bounce peut toucher les alliés sans dégâts, avec 70% de chance de recharger 1 balle.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Bounce can hit allies but deals no DMG, with a 70% chance to automatically refill 1 bullet"
+ },
+ "viper-mask": {
+  "effect": "Portée d'Unstable Bomber +50%. Pour chaque +2% de portée, dég d'Unstable Bomber +1%.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Unstable Bomber range +50%. For every 2% increase in range, gain 1% more Unstable Bomber DMG"
+ },
+ "yellow-painted-mask": {
+  "effect": "Vaincre un ennemi génère une EMP qui inflige 1 Power Surge aux ennemis de la zone.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "Defeating enemies generates an EMP, dealing Power Surge 1 time to enemies in the area"
+ },
+ "covert-walker-shirt": {
+  "effect": "(Stealth Walker Wrap) Frost Vortex s'effondre au centre et attire en continu les ennemis dans 1,5× son rayon.",
+  "keyArmor": true,
+  "source": "once-human.fandom.com",
+  "effectEn": "(Stealth Walker Wrap) Frost Vortex collapses in the center and keeps pulling in enemies within 1.5× the vortex's range"
+ },
+ "dark-resonance-helmet": {
+  "set": "Dark Resonance",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "dark-resonance-mask": {
+  "set": "Dark Resonance",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "dark-resonance-vest": {
+  "set": "Dark Resonance",
+  "pollution": 12,
+  "source": "oncehumandb.com"
+ },
+ "dark-resonance-gloves": {
+  "set": "Dark Resonance",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "dark-resonance-pants": {
+  "set": "Dark Resonance",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ },
+ "dark-resonance-shoes": {
+  "set": "Dark Resonance",
+  "pollution": 9,
+  "source": "oncehumandb.com"
+ }
+}

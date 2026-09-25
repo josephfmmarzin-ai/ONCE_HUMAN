@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Once Human — Carte des ressources / Resource map</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141a1f;--panel:#1c2329;--panel2:#232c34;--line:#2f3a44;--line2:#3d4a56;--ink:#e8e2d4;--ink2:#a7b0b8;--ink3:#6f7a85;--star:#f2c14e;--teal:#3fb7a9;--red:#e2604f;--fh:"Barlow Condensed","Arial Narrow",Arial,sans-serif;--fb:"Barlow",Arial,sans-serif}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fb);font-size:14px;line-height:1.45}
+header{display:flex;align-items:center;gap:16px;padding:10px 20px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5}
+header h1{font-family:var(--fh);font-size:26px;margin:0;color:var(--star)}header h1 small{display:block;font-family:var(--fb);font-weight:400;font-size:11px;color:var(--ink3)}
+.langsw{margin-left:auto;display:inline-flex;border:1px solid var(--teal);border-radius:4px;overflow:hidden}.langsw button{border:none;background:none;color:var(--ink2);padding:5px 9px;font:inherit;cursor:pointer}.langsw button.on{background:var(--teal);color:#062a26;font-weight:600}
+main{display:grid;grid-template-columns:260px 1fr 360px;min-height:calc(100vh - 56px)}
+aside{background:var(--panel);padding:14px;border-right:1px solid var(--line)}aside.right{border-right:none;border-left:1px solid var(--line);overflow:auto;height:calc(100vh - 56px);position:sticky;top:56px}
+h3{font-family:var(--fh);font-size:15px;color:var(--ink2);margin:14px 0 6px;font-weight:600}h3:first-child{margin-top:0}
+input.search,select{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:4px;padding:8px 10px;color:var(--ink);font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:5px}.chip{background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:3px 8px;font-size:12px;color:var(--ink2);cursor:pointer}.chip.on{border-color:var(--star);color:var(--star)}
+.mapwrap{padding:14px;display:flex;flex-direction:column;gap:10px}
+svg{width:100%;height:auto;background:#0e1215;border:1px solid var(--line);border-radius:6px}
+.region{fill:#232c34;stroke:#3d4a56;stroke-width:2;cursor:pointer;transition:fill .15s}.region:hover{fill:#2c3742}.region.hit{fill:#2f5a55;stroke:var(--teal)}.region.sel{stroke:var(--star);stroke-width:3}.region.dim{fill:#1a2026;stroke:#2a333c}
+.rlabel{font-family:var(--fh);font-size:15px;font-weight:700;fill:#e8e2d4;pointer-events:none}.rlvl{font-family:var(--fb);font-size:10px;fill:#a7b0b8;pointer-events:none}
+.poi{fill:var(--star);stroke:#1a1300;stroke-width:1}.poi.silo{fill:var(--teal)}.poi.mono{fill:var(--red)}.poilabel{font-size:9px;fill:#a7b0b8;pointer-events:none}
+.water{fill:#10202a}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2)}.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.right h2{font-family:var(--fh);font-size:24px;margin:0 0 2px}.right .sub{color:var(--ink2);margin-bottom:10px}
+.right h4{font-family:var(--fh);font-size:15px;color:var(--star);margin:12px 0 4px}.right ul{margin:0;padding-left:18px}.right li{margin:2px 0}
+.tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:1px 6px;font-size:11px;color:var(--ink2);margin:2px 2px 0 0}
+.tag.hit{border-color:var(--teal);color:var(--teal)}
+a{color:var(--teal)}.muted{color:var(--ink3);font-size:12px}
+.empty{color:var(--ink3);margin-top:40px;text-align:center}
+.btn{background:var(--panel2);border:1px solid var(--line2);border-radius:4px;padding:6px 10px;color:var(--ink);font:inherit;cursor:pointer;text-decoration:none;display:inline-block;margin-top:6px}.btn:hover{border-color:var(--star);color:var(--star)}
+@media(max-width:1000px){main{grid-template-columns:1fr}aside.right{position:static;height:auto}}
+</style>
+</head>
+<body>
+<header><h1 id="ttl">Once Human<small></small></h1><span class="langsw"><button id="bfr" onclick="setLang('fr')">FR</button><button id="ben" onclick="setLang('en')">EN</button></span></header>
+<main>
+<aside id="left"></aside>
+<section class="mapwrap"><div id="map"></div><div class="legend" id="legend"></div><p class="muted" id="note"></p></section>
+<aside class="right" id="right"></aside>
+</main>
+<script>
+// ---------- Données (régions du scénario Manibus / Evolution's Call, + Way of Winter) ----------
+const REGIONS = [
+ {id:'dayton',name:'Dayton Wetlands',lvl:'1-10',hub:'Deadsville',x:640,y:60,w:250,h:200,
+  desc:{fr:'Zone de départ : marais et fermes. Cuivre partout, ni étain ni fer.',en:'Starting area: swamps and farms. Copper everywhere, no tin or iron.'},
+  animals:['Deer','Rabbit','Boar'],ores:['Copper Ore','Silver Ore'],plants:['Wood','Shabby Fabric','Rubber'],
+  pois:[{n:'Deadsville',t:'hub',x:700,y:110},{n:'Dayton Hospital',t:'poi',x:800,y:170},{n:'Silo Alpha',t:'silo',x:840,y:90},{n:'Sunbury Farm',t:'poi',x:670,y:200}]},
+ {id:'delta',name:'Broken Delta',lvl:'6-20',hub:"Meyer's Market",x:640,y:280,w:250,h:220,
+  desc:{fr:'Villes de pêcheurs, zones industrielles, forêt. Première zone à étain (quantités énormes près des rivières). Meilleur spot à cerfs du jeu (plages du sud).',en:'Fishing towns, industrial areas, forest. First tin zone (huge amounts near rivers). Best deer spot in the game (southern beaches).'},
+  animals:['Deer','Rabbit','Boar','Crocodile'],ores:['Copper Ore','Tin Ore','Silver Ore'],plants:['Wood','Acid (Sulfur)','Rubber'],
+  pois:[{n:"Meyer's Market",t:'hub',x:700,y:330},{n:'Hearst Industries',t:'poi',x:800,y:310},{n:'Monolith of Greed',t:'mono',x:830,y:420},{n:'Gaia Cliff Monolith',t:'mono',x:690,y:460},{n:'Silo EX1',t:'silo',x:760,y:470}]},
+ {id:'iron',name:'Iron River',lvl:'20-30',hub:'Greywater Camp',x:400,y:200,w:230,h:230,
+  desc:{fr:'Grande rivière et falaises. Première zone à fer (le meilleur spot : au sud-ouest, près de la tour de téléportation). Sangliers et cerfs en masse.',en:'Big river and cliffs. First iron zone (best spot: south-west, near the teleport tower). Lots of boars and deer.'},
+  animals:['Deer','Rabbit','Boar'],ores:['Copper Ore','Tin Ore','Iron Ore','Silver Ore'],plants:['Wood','Acid (Sulfur)'],
+  pois:[{n:'Greywater Camp',t:'hub',x:470,y:260},{n:'Greywater Industrial Zone',t:'poi',x:560,y:300},{n:'Silo PHI',t:'silo',x:430,y:390},{n:'Monolith of Thirst',t:'mono',x:590,y:400}]},
+ {id:'chalk',name:'Chalk Peak',lvl:'30-40',hub:'Tall Grass Inn',x:120,y:60,w:510,h:130,
+  desc:{fr:'La plus grande région : forêts, montagnes, grandes plaines. Première zone à aluminium et à minerai de Stardust. Le plus d\'animaux : ours (autour du Monolith of Thirst), crocodiles (rivières), cerfs, sangliers, lapins, loups.',en:'Largest region: forests, mountains, big flat plains. First aluminum and Stardust ore zone. Most animals: bears (around Monolith of Thirst), crocodiles (rivers), deer, boars, rabbits, wolves.'},
+  animals:['Deer','Rabbit','Boar','Bear','Crocodile','Wolf'],ores:['Copper Ore','Tin Ore','Iron Ore','Aluminum Ore','Stardust Ore','Silver Ore'],plants:['Wood','Acid (Sulfur)'],
+  pois:[{n:'Tall Grass Inn',t:'hub',x:300,y:110},{n:'Silo THETA',t:'silo',x:180,y:150},{n:'Evergreen Vineyard',t:'poi',x:420,y:100},{n:'Rotten Saddle',t:'poi',x:520,y:150},{n:'Silo SIGMA',t:'silo',x:230,y:95}]},
+ {id:'redsands',name:'Red Sands',lvl:'40-50',hub:'Blackfell',x:120,y:200,w:270,h:200,
+  desc:{fr:'Désert avec une grande ville (Blackfell) et des bases militaires. Première zone à tungstène (bordure sud-est, en groupes) et à or. Meutes de loups et moutons/chèvres.',en:'Desert with a big city (Blackfell) and military bases. First tungsten zone (south-east border, in clusters) and gold. Wolf packs and sheep/goats.'},
+  animals:['Wolf','Sheep','Rabbit'],ores:['Copper Ore','Tin Ore','Iron Ore','Aluminum Ore','Tungsten Ore','Gold Ore','Stardust Ore','Silver Ore'],plants:['Acid (Sulfur)'],
+  pois:[{n:'Blackfell',t:'hub',x:190,y:260},{n:'Fort Erie',t:'poi',x:300,y:240},{n:'Silo PSI',t:'silo',x:330,y:350},{n:'Mirage Monolith',t:'mono',x:180,y:360},{n:'Alkirk',t:'poi',x:260,y:310}]},
+ {id:'blackheart',name:'Blackheart Region',lvl:'45-50',hub:'Blackfell (sud)',x:120,y:410,w:400,h:110,
+  desc:{fr:'Zone de fin de jeu au sud-ouest. Meilleur endroit pour aluminium, tungstène, or et argent (coin est, suivre la route). Loups, moutons.',en:'Endgame zone in the south-west. Best place for aluminum, tungsten, gold and silver (east corner, follow the road). Wolves, sheep.'},
+  animals:['Wolf','Sheep','Rabbit'],ores:['Copper Ore','Tin Ore','Iron Ore','Aluminum Ore','Tungsten Ore','Gold Ore','Stardust Ore','Silver Ore'],plants:['Acid (Sulfur)'],
+  pois:[{n:'Silo DELTA',t:'silo',x:200,y:470},{n:'Forsaken Monolith',t:'mono',x:420,y:470},{n:'LEA Research Lab',t:'poi',x:320,y:490}]},
+];
+const WINTER = [
+ {id:'vena',name:'Vena Fjord',lvl:'1-30',hub:'Way of Winter',x:930,y:60,w:170,h:200,desc:{fr:'Scénario Way of Winter : fjord froid. Peaux Lunar / Dreamfused / Starfall (variantes de saison).',en:'Way of Winter scenario: cold fjord. Lunar / Dreamfused / Starfall hides (seasonal variants).'},animals:['Deer','Rabbit','Wolf','Bear','Fox','Seal'],ores:['Copper Ore','Tin Ore','Iron Ore','Silver Ore'],plants:['Wood'],pois:[{n:'Avalanche Monolith',t:'mono',x:1010,y:200},{n:'Silo EX1 (WoW)',t:'silo',x:970,y:110}]},
+ {id:'onyx',name:'Onyx Tundra',lvl:'30-50',hub:'Way of Winter',x:930,y:280,w:170,h:120,desc:{fr:'Toundra glacée, ours des glaces, renards polaires.',en:'Frozen tundra, ice bears, polar foxes.'},animals:['Bear','Fox','Deer','Wolf'],ores:['Aluminum Ore','Tungsten Ore','Stardust Ore'],plants:[],pois:[{n:'Tundra Monolith',t:'mono',x:1030,y:350},{n:'Silo PSI (WoW)',t:'silo',x:960,y:320}]},
+ {id:'lonewolf',name:'Lone Wolf Wastes',lvl:'45-50',hub:'Way of Winter',x:930,y:420,w:170,h:100,desc:{fr:'Fin de jeu Way of Winter.',en:'Way of Winter endgame.'},animals:['Wolf','Sheep'],ores:['Tungsten Ore','Gold Ore','Silver Ore'],plants:[],pois:[]},
+];
+// Animaux -> peaux / matières (noms du jeu)
+const ANIMALS = {
+ Deer:{fr:'Cerf / Biche / Faon',en:'Buck / Doe / Deerling',drops:['Deer Hide','Highland Deer Hide','Forest Deer Hide','Tundra Deer Hide','Raw Meat']},
+ Rabbit:{fr:'Lapin',en:'Rabbit',drops:['Rabbit Fur','Lucky Rabbit Fur','Raw Meat']},
+ Boar:{fr:'Sanglier',en:'Boar',drops:['Hide','Raw Meat']},
+ Bear:{fr:'Ours',en:'Bear',drops:['Bear Skin','Cave Bear Skin','Floating Ice Bear Skin','Raw Meat']},
+ Crocodile:{fr:'Crocodile (rivières)',en:'Crocodile (rivers)',drops:['Crocodile Hide','Beach Crocodile Skin','Coastal Bay Crocodile Skin','Raw Meat']},
+ Wolf:{fr:'Loup (meutes, agressif)',en:'Wolf (packs, aggressive)',drops:['Grassland Wolf Skin','Raw Meat']},
+ Sheep:{fr:'Mouton / Chèvre / Bélier',en:'Ewe / Lamb / Ram',drops:['Wool','Mountain Wool','Rock Wall Wool','Golden Wool','Raw Meat']},
+ Cow:{fr:'Vache (fermes)',en:'Cow (farms)',drops:['Cowhide','Mountain Cowhide','Valley Cowhide']},
+ Fox:{fr:'Renard',en:'Fox',drops:['Fox Skin','Desert Fox Skin','Polar Fox Skin']},
+ Seal:{fr:'Phoque',en:'Seal',drops:['Sealskin']},
+};
+// Minerais -> lingots -> composants de craft (recettes d'armes de la base)
+const ORES = {
+ 'Copper Ore':{fr:'Minerai de cuivre',en:'Copper Ore',makes:['Copper Ingot','Rusted Part'],pick:'Rough pickaxe'},
+ 'Tin Ore':{fr:'Minerai d\'étain',en:'Tin Ore',makes:['Tin Ingot','Bronze Ingot'],pick:'Copper pickaxe'},
+ 'Iron Ore':{fr:'Minerai de fer',en:'Iron Ore',makes:['Iron Ingot','Steel Ingot','Rifle Receiver I','SMG Receiver I','Sniper Rifle Receiver I','Fixed Stock I','Folding Stock I','Standard Barrel I','Long Barrel I'],pick:'Bronze pickaxe'},
+ 'Aluminum Ore':{fr:'Minerai d\'aluminium',en:'Aluminum Ore',makes:['Aluminum Ingot','Tier III-IV gear'],pick:'Steel pickaxe'},
+ 'Tungsten Ore':{fr:'Minerai de tungstène',en:'Tungsten Ore',makes:['Tungsten Ingot (+Acid)','Tier V gear','Legendary Pneumatic/Bolt/Blowback/Recoil Action I'],pick:'Aluminum pickaxe'},
+ 'Gold Ore':{fr:'Minerai d\'or (rare)',en:'Gold Ore (rare)',makes:['Gold Ingot'],pick:'Tungsten pickaxe'},
+ 'Silver Ore':{fr:'Minerai d\'argent (rare, partout)',en:'Silver Ore (rare, everywhere)',makes:['Silver Ingot','The Digby Boy (chance)'],pick:'Steel pickaxe'},
+ 'Stardust Ore':{fr:'Minerai de Stardust (zones polluées > 100)',en:'Stardust Ore (polluted areas > 100)',makes:['Stardust Source','Calibrations','Compound Bow / Critical Pulse / Scourge'],pick:'Aluminum pickaxe'},
+};
+const PLANTS = {'Wood':{fr:'Bois',en:'Wood'},'Shabby Fabric':{fr:'Tissu usé (lootable)',en:'Shabby Fabric (loot)'},'Rubber':{fr:'Caoutchouc (loot / pneus)',en:'Rubber (loot / tires)'},'Acid (Sulfur)':{fr:'Acide (soufre) — raffinage du tungstène',en:'Acid (sulfur) — tungsten refining'}};
+// Matière -> ce qu'il faut chasser / miner
+const MATERIAL_INDEX = {};
+for (const [a,v] of Object.entries(ANIMALS)) for (const d of v.drops) (MATERIAL_INDEX[d] = MATERIAL_INDEX[d]||[]).push({kind:'animal',key:a});
+for (const [o,v] of Object.entries(ORES)) { (MATERIAL_INDEX[o]=MATERIAL_INDEX[o]||[]).push({kind:'ore',key:o}); for (const m of v.makes) (MATERIAL_INDEX[m]=MATERIAL_INDEX[m]||[]).push({kind:'ore',key:o}); }
+for (const p of Object.keys(PLANTS)) (MATERIAL_INDEX[p]=MATERIAL_INDEX[p]||[]).push({kind:'plant',key:p});
+
+const T = {
+ fr:{sub:'Carte des ressources — Nalcott (Manibus / Evolution\'s Call) + Way of Winter',find:'Chercher une ressource',ph:'Ex. Tungsten, Bear Skin, Wolf, Iron…',cat:'Catégories',animals:'Animaux (peaux)',ores:'Minerais',plants:'Autres',hint:'Clique sur une région pour voir ses ressources. Choisis une ressource : les régions où on la trouve s\'allument.',
+   level:'Niveau',hub:'Bastion / téléporteur',anim:'Animaux',ore:'Minerais',other:'Autres',pois:'Lieux notables',drops:'donne',exact:'Points exacts sur la carte oncehuman.th.gl',selectR:'Sélectionne une région ou une ressource.',found:'Où trouver',
+   legend:'Légende :',lhub:'Bastion',lsilo:'Silo',lmono:'Monolith / boss',lpoi:'Lieu',note:'Carte schématique (positions approximatives des régions et lieux, pas à l\'échelle). Les positions exactes des filons et des animaux se trouvent sur les cartes interactives liées. Sources : once-human.fandom.com (Mining, Areas), dexerto, upcomer, sportskeeda, gamerant.',
+   sold:'Exemple : une arme légendaire T5 = Rifle Receiver (fer/acier) + Legendary Action (tungstène + acide) + Stock + Barrel ; une armure = peaux (bonus selon la peau) + tissu + lingots.'},
+ en:{sub:'Resource map — Nalcott (Manibus / Evolution\'s Call) + Way of Winter',find:'Find a resource',ph:'e.g. Tungsten, Bear Skin, Wolf, Iron…',cat:'Categories',animals:'Animals (hides)',ores:'Ores',plants:'Other',hint:'Click a region to see its resources. Pick a resource: the regions where it is found light up.',
+   level:'Level',hub:'Stronghold / teleporter',anim:'Animals',ore:'Ores',other:'Other',pois:'Notable places',drops:'drops',exact:'Exact spawn points on oncehuman.th.gl',selectR:'Select a region or a resource.',found:'Where to find',
+   legend:'Legend:',lhub:'Stronghold',lsilo:'Silo',lmono:'Monolith / boss',lpoi:'Place',note:'Schematic map (approximate region and place positions, not to scale). Exact ore veins and animal spawns are on the linked interactive maps. Sources: once-human.fandom.com (Mining, Areas), dexerto, upcomer, sportskeeda, gamerant.',
+   sold:'Example: a T5 legendary weapon = Rifle Receiver (iron/steel) + Legendary Action (tungsten + acid) + Stock + Barrel; armor = hides (bonus depends on the hide) + fabric + ingots.'},
+};
+let lang = (()=>{try{return JSON.parse(localStorage.getItem('oh_lang'))||'fr'}catch(e){return 'fr'}})();
+const t = k => T[lang][k];
+let sel = null, res = null, q = '';
+function setLang(l){lang=l;try{localStorage.setItem('oh_lang',JSON.stringify(l))}catch(e){}render()}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+const thgl = n => 'https://oncehuman.th.gl/guides/'+encodeURIComponent(n);
+
+function regionHas(r, key, kind){ if(kind==='animal') return r.animals.includes(key); if(kind==='ore') return r.ores.includes(key); return r.plants.includes(key); }
+function hitRegions(){ if(!res) return new Set(); const s=new Set(); for(const r of [...REGIONS,...WINTER]) if(regionHas(r,res.key,res.kind)) s.add(r.id); return s; }
+
+function render(){
+  document.querySelector('#ttl small').textContent=t('sub'); document.getElementById('bfr').className=lang==='fr'?'on':''; document.getElementById('ben').className=lang==='en'?'on':'';
+  const hits = hitRegions();
+  // ---- carte
+  const all=[...REGIONS,...WINTER];
+  let svg=`<svg viewBox="0 0 1120 540" xmlns="http://www.w3.org/2000/svg">`;
+  svg+=`<rect class="water" x="0" y="0" width="1120" height="540"/>`;
+  svg+=`<text x="640" y="35" class="rlabel" style="font-size:13px;fill:#6f7a85">NALCOTT — Manibus / Evolution's Call</text><text x="930" y="35" class="rlabel" style="font-size:13px;fill:#6f7a85">WAY OF WINTER</text>`;
+  for(const r of all){
+    const cls='region'+(hits.has(r.id)?' hit':'')+(sel===r.id?' sel':'')+(res&&!hits.has(r.id)?' dim':'');
+    svg+=`<rect class="${cls}" x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" rx="14" onclick="selectRegion('${r.id}')"/>`;
+    svg+=`<text class="rlabel" x="${r.x+12}" y="${r.y+24}">${esc(r.name)}</text><text class="rlvl" x="${r.x+12}" y="${r.y+38}">${t('level')} ${r.lvl} · ${esc(r.hub)}</text>`;
+    for(const p of r.pois){ svg+=`<circle class="poi ${p.t}" cx="${p.x}" cy="${p.y}" r="${p.t==='hub'?6:4.5}" onclick="selectRegion('${r.id}')"/><text class="poilabel" x="${p.x+8}" y="${p.y+3}">${esc(p.n)}</text>`; }
+    // icônes ressources en bas de région
+    const icons=[...r.animals.map(a=>({k:a,kind:'animal',sym:{Deer:'🦌',Rabbit:'🐇',Boar:'🐗',Bear:'🐻',Crocodile:'🐊',Wolf:'🐺',Sheep:'🐑',Cow:'🐄',Fox:'🦊',Seal:'🦭'}[a]||'•'})),...r.ores.filter(o=>!['Copper Ore','Silver Ore'].includes(o)||r.id==='dayton').map(o=>({k:o,kind:'ore',sym:{'Tin Ore':'Sn','Iron Ore':'Fe','Aluminum Ore':'Al','Tungsten Ore':'W','Gold Ore':'Au','Silver Ore':'Ag','Stardust Ore':'✦','Copper Ore':'Cu'}[o]}))];
+    let ix=r.x+10, iy=r.y+r.h-12;
+    for(const ic of icons){ const on=res&&res.key===ic.k; svg+=`<text x="${ix}" y="${iy}" style="font-size:${ic.kind==='animal'?14:11}px;font-family:var(--fb);font-weight:600;fill:${on?'#f2c14e':(ic.kind==='animal'?'#e8e2d4':'#3fb7a9')};cursor:pointer" onclick="selectRes('${ic.k}','${ic.kind}')">${ic.sym}</text>`; ix+= ic.kind==='animal'?20:22; }
+  }
+  svg+=`</svg>`;
+  document.getElementById('map').innerHTML=svg;
+  document.getElementById('legend').innerHTML=`<span>${t('legend')}</span><span><i style="background:var(--star)"></i>${t('lhub')}</span><span><i style="background:var(--teal)"></i>${t('lsilo')}</span><span><i style="background:var(--red)"></i>${t('lmono')}</span><span><i style="background:#3fb7a9;border-radius:0;width:14px;height:8px"></i>${t('ores')} : Cu Sn Fe Al W Au Ag ✦</span>`;
+  document.getElementById('note').textContent=t('note');
+  // ---- gauche : recherche
+  const ql=q.trim().toLowerCase();
+  const matches = ql? Object.keys(MATERIAL_INDEX).filter(m=>m.toLowerCase().includes(ql)).slice(0,25):[];
+  const chip=(k,kind,label)=>`<button class="chip ${res&&res.key===k&&res.kind===kind?'on':''}" onclick="selectRes('${k}','${kind}')">${esc(label)}</button>`;
+  document.getElementById('left').innerHTML=`<h3>${t('find')}</h3><input class="search" placeholder="${t('ph')}" value="${esc(q)}" oninput="q=this.value;render();this.focus();this.setSelectionRange(this.value.length,this.value.length)">
+    ${matches.length?`<div class="chips" style="margin-top:6px">${matches.map(m=>{const src=MATERIAL_INDEX[m][0];return chip(src.key,src.kind,m)}).join('')}</div>`:''}
+    <p class="muted">${t('hint')}</p>
+    <h3>${t('animals')}</h3><div class="chips">${Object.entries(ANIMALS).map(([k,v])=>chip(k,'animal',v[lang])).join('')}</div>
+    <h3>${t('ores')}</h3><div class="chips">${Object.entries(ORES).map(([k,v])=>chip(k,'ore',v[lang])).join('')}</div>
+    <h3>${t('plants')}</h3><div class="chips">${Object.entries(PLANTS).map(([k,v])=>chip(k,'plant',v[lang])).join('')}</div>
+    <p class="muted" style="margin-top:14px">${t('sold')}</p>`;
+  // ---- droite : détail
+  let right='';
+  if(res){
+    const info = res.kind==='animal'?ANIMALS[res.key]:res.kind==='ore'?ORES[res.key]:PLANTS[res.key];
+    const where = all.filter(r=>hits.has(r.id));
+    right+=`<h2>${esc(info[lang])}</h2><div class="sub">${esc(res.key)}</div>`;
+    if(res.kind==='animal') right+=`<h4>${t('drops')}</h4><div>${info.drops.map(d=>`<span class="tag">${esc(d)}</span>`).join('')}</div>`;
+    if(res.kind==='ore') right+=`<h4>${lang==='fr'?'Pioche requise':'Pickaxe required'}</h4><p>${esc(info.pick)}</p><h4>${lang==='fr'?'Sert à fabriquer':'Used to craft'}</h4><div>${info.makes.map(d=>`<span class="tag">${esc(d)}</span>`).join('')}</div>`;
+    right+=`<h4>${t('found')}</h4><ul>${where.map(r=>`<li><a href="#" onclick="selectRegion('${r.id}');return false">${esc(r.name)}</a> <span class="muted">(${t('level')} ${r.lvl})</span></li>`).join('')||'<li>—</li>'}</ul>`;
+    const thName = res.kind==='animal'?{Deer:'Deer',Rabbit:'Rabbit',Boar:'Boar',Bear:'Bear',Crocodile:'Crocodile',Wolf:'Wolf',Sheep:'Sheep',Cow:'Cow',Fox:'Fox',Seal:'Seal'}[res.key]:res.key;
+    right+=`<a class="btn" target="_blank" rel="noopener" href="${thgl(thName)}">${t('exact')} →</a>`;
+    if(sel) right+='<hr style="border:0;border-top:1px solid var(--line);margin:14px 0">';
+  }
+  if(sel){
+    const r=all.find(r=>r.id===sel);
+    right+=`<h2>${esc(r.name)}</h2><div class="sub">${t('level')} ${r.lvl} · ${t('hub')} : ${esc(r.hub)}</div><p>${esc(r.desc[lang])}</p>`;
+    right+=`<h4>${t('anim')}</h4><div>${r.animals.map(a=>`<span class="tag ${res&&res.key===a?'hit':''}" style="cursor:pointer" onclick="selectRes('${a}','animal')">${esc(ANIMALS[a][lang])} → ${esc(ANIMALS[a].drops.filter(d=>!d.includes('Meat'))[0]||'')}</span>`).join('')}</div>`;
+    right+=`<h4>${t('ore')}</h4><div>${r.ores.map(o=>`<span class="tag ${res&&res.key===o?'hit':''}" style="cursor:pointer" onclick="selectRes('${o}','ore')">${esc(ORES[o][lang])}</span>`).join('')}</div>`;
+    if(r.plants.length) right+=`<h4>${t('other')}</h4><div>${r.plants.map(p=>`<span class="tag">${esc(PLANTS[p][lang])}</span>`).join('')}</div>`;
+    if(r.pois.length) right+=`<h4>${t('pois')}</h4><ul>${r.pois.map(p=>`<li>${esc(p.n)} <span class="muted">(${({hub:t('lhub'),silo:t('lsilo'),mono:t('lmono'),poi:t('lpoi')})[p.t]})</span></li>`).join('')}</ul>`;
+  }
+  document.getElementById('right').innerHTML = right || `<p class="empty">${t('selectR')}</p>`;
+}
+function selectRegion(id){ sel = sel===id? null : id; render(); }
+function selectRes(k,kind){ res = (res&&res.key===k&&res.kind===kind)? null : {key:k,kind}; render(); }
+render();
+</script>
+</body>
+</html>

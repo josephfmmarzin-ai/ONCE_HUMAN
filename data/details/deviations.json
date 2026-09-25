@@ -1,0 +1,261 @@
+{
+ "Butterfly's Emissary": {
+  "effect": "Designated Target: designate a target to attack. Auto Attack: attacks enemies; marks the enemy's Weakspot on hit, making it take +25%/30%/35% extra Weakspot DMG for 5s.",
+  "location": "Tutoriel Eve of Evolution, GAIA Research Center Ruins, Silo Alpha"
+ },
+ "Dr. Teddy": {
+  "effect": "Remote Healing: throw to heal 50% Max HP instantly and revive a downed target. Intime Healing: 8% Max HP heal per second, revives allies.",
+  "location": "Silo THETA"
+ },
+ "Enchanting Void": {
+  "effect": "Midnight Maul: player transforms into a panther for 20s, auto-attacks and increases melee DMG taken by targets. Combat Assist: Movement Speed +10% with a melee weapon, recover 10% Max HP on melee hit.",
+  "location": "Silo THETA (énigme des statues)"
+ },
+ "Festering Gel": {
+  "effect": "Flawless Fortification: knocks back enemies and forms a shelter. Build Fortification: fixed shelter that blocks attacks; allies nearby recover 6% HP and 3% Sanity per second.",
+  "location": "Monolith of Greed (Ravenous Hunter), Gaia Cliff Monolith (Treant)"
+ },
+ "Grumpy Bulb": {
+  "effect": "Garlicify: AoE Status DMG on hit and disrupts aggro for 10s. Autonomous Attack: cannot move, continuously attracts aggro of nearby enemies.",
+  "location": "Graine d'oignon mature à la base"
+ },
+ "Invincible Sun": {
+  "effect": "Autonomous Attack: periodically releases blazing energy rays that hit all nearby enemies, inflicting continuous Burn DMG.",
+  "location": "Silo Delta"
+ },
+ "Lonewolf's Whisper": {
+  "effect": "Designated Target + Auto Attack: attacks enemies and attracts their aggro; spawns a clone when a target dies. Increases Weapon DMG received by the attacked target by 21.6% (Lunar version: +5% Weapon DMG, +10% at low Sanity).",
+  "location": "Monolith of Thirst (Shadow Hound)"
+ },
+ "Mini Feaster": {
+  "effect": "Touch of the Abyss: follows the player, summons tentacles near enemies to smash. When a target triggers Bounce, tentacles are guaranteed next to it and enhance the player's Weapon DMG.",
+  "location": "Tâche « Lord of the Quest » (Lowe) ou événements Mist Zone"
+ },
+ "Mini Wonder": {
+  "effect": "Designated Target: buffs an ally. Bullet Absorption: absorbs bullets within a radius.",
+  "location": "Tâche « Other World Traveler » (Lowe)"
+ },
+ "Mr. Wish": {
+  "effect": "Rapid Fire: bursts at enemies near the crosshair, marking them with The Bull's Eye. Auto Attack.",
+  "location": "Silo SIGMA"
+ },
+ "Polar Jelly": {
+  "effect": "Frostlash: knocks back enemies and forms a fortification. Auto Attack: continuously deals Frost Status DMG to surrounding enemies and pulls them toward it; increases Frost DMG received by 36%. Frost Vortexes formed inside its radius create additional Ice Spikes.",
+  "location": "Événements Cargo Scramble"
+ },
+ "Pyro Dino": {
+  "effect": "Designated Target + Autonomous Attack: attacks enemies, increases Blaze DMG received by 24.5%. Attacking a target affected by Burn causes an Explosion.",
+  "location": "Silo PHI"
+ },
+ "Radiant One": {
+  "effect": "Combat Assist: floating zone under the player, Movement Speed +20%, jump speed +2, immune to fall DMG and stagger.",
+  "location": "Phase 3 de The Last Stand (Prismverse's Clash)"
+ },
+ "Shattered Maiden": {
+  "effect": "Designated Target + Auto Attack: inflicts Slowdown and Chained to non-boss enemies in front, and increases their Explosion DMG received by 40%.",
+  "location": "Tâche « Farmside Fright » (Lowe) ou Silo THETA"
+ },
+ "Snowsprite": {
+  "effect": "Auto Attack: generates Ice Crystals near the target every 3s. Crystals shatter when shot, dealing 37.5% to 87.5% Frost DMG to nearby targets and making them take +18% to +42% Frost DMG.",
+  "location": "Tâche « Deviation: Snowsprite » (Lowe)"
+ },
+ "Voodoo Doll": {
+  "effect": "Designated Target: shares part of the DMG taken (ally) or makes an enemy share DMG taken by the player. Doppelganger: shares half of the DMG received by the player.",
+  "location": "Evergreen Vineyard (Chalk Peak), Fort Erie (Red Sands), hôpitaux"
+ },
+ "Zeno-Purifier": {
+  "effect": "Designated Target + Auto Attack: lets the player teleport to the target with melee attacks.",
+  "location": "Objectif saisonnier « 200 ennemis en mêlée » ou coffres"
+ },
+ "Berserkosaurus Rex": {
+  "effect": "Culinary Genius: increases cooking proficiency (scales with Deviant Energy).",
+  "location": "Phase 2 du Clash at Blackfell"
+ },
+ "Buzzy Bee": {
+  "effect": "Deviated Gardening: increases crop mutation chance (scales with Deviant Energy).",
+  "location": "Sunbury Farm, Evergreen Vineyard, Brewery Estate"
+ },
+ "Chefosaurus Rex": {
+  "effect": "Culinary Genius: increases cooking proficiency (scales with Deviant Energy).",
+  "location": "Tâche « There's a Dragon There » (Lowe) ou Silo PHI"
+ },
+ "Electric Eel": {
+  "effect": "Electricity Fluctuations: increases the power limit of Generators.",
+  "location": "Pêche"
+ },
+ "Extradimensional Cat": {
+  "effect": "Velvet Cushion: sleeps with its owner so they're fully energetic the next day.",
+  "location": "Près des tours de téléportation des bastions de l'Union"
+ },
+ "Flame Essence": {
+  "effect": "Molten Heat: increases Furnace and Electric Furnace production efficiency.",
+  "location": "Hearst Industries (Broken Delta) ou Silo PSI"
+ },
+ "Gazocchio": {
+  "effect": "Territory Guard: patrols and attacks intruders; conjures tiny Gazocchio that shine light to dispel shadows.",
+  "location": "Tâche « Part of the Deviant » (Lowe)"
+ },
+ "Growshroom": {
+  "effect": "Thriving Growth: automatically plants seeds and accelerates crop growth.",
+  "location": "Récolte de champignons sauvages"
+ },
+ "H37": {
+  "effect": "Explorer: loots chests in different areas and brings back goodies.",
+  "location": "Tâche « Fragments of Memory » ou Silo ALPHA"
+ },
+ "Hydronaut Fish": {
+  "effect": "Rapid Purification: gathers seawater, occasional special catches; boosts Water Filter / Brewing Barrel efficiency.",
+  "location": "Tâche « Deviation: Hydronaut Fish » (Lowe)"
+ },
+ "Lethal Rabbit": {
+  "effect": "Hunter Instincts: explores and hunts, bringing back animal resources.",
+  "location": "Deadsville, Heart Island, Evergreen"
+ },
+ "Logging Beaver": {
+  "effect": "Log Trees: goes out logging; uses a Logging Operation Platform if available.",
+  "location": "Meyer's Market, Iron River, Broken Delta"
+ },
+ "Nutcracker": {
+  "effect": "Mobile Turret: patrols the territory and attacks intruders.",
+  "location": "Forsaken Monolith (Forsaken Giant)"
+ },
+ "Paper Doll": {
+  "effect": "Safe Haven Barrier: walls, floors and the Stardust Resonant Filter auto-recover durability; chance of rewards when killing invading Deviants.",
+  "location": "Partout sur Nalcott"
+ },
+ "Rain Man": {
+  "effect": "Hoping for a downpour: boosts crop vitality and provides irrigation water.",
+  "location": "Harborside (Broken Delta), Greywater (Iron River), Unmarked Settlement (Chalk Peak)"
+ },
+ "Rebecca": {
+  "effect": "Energy Recover: Mitsuko plays piano and improves Deviant Energy recovery efficiency.",
+  "location": "Boss final du LEA Research Lab"
+ },
+ "Tar Pudding": {
+  "effect": "Oil Gathering: gathers fuel around the territory; accelerates refinery conversion.",
+  "location": "Avalanche Monolith (Vena Fjord)"
+ },
+ "The Digby Boy": {
+  "effect": "Mine Ore: goes out mining; uses a Mining Operation Platform if available.",
+  "location": "Tâche « Deviation Expert » (Lowe) ou minage d'argent"
+ },
+ "Wish Box": {
+  "effect": "Unfair Trade: transforms items placed inside into random new items.",
+  "location": "Morphic Crates ou Severin VII-S2401"
+ },
+ "Artisan's Touch": {
+  "effect": "Formula: All-Purpose Hand: repairs the least durable gear you equip (crafted gear only).",
+  "location": "Élite Scorcher"
+ },
+ "Atomic Lighter": {
+  "effect": "Tactical Item: Uncontrollable Fusion Lighter: random instances of damage; extra loot on kills.",
+  "location": "Silo EX1"
+ },
+ "Atomic Snail": {
+  "effect": "Whim: Fluid Type: sprint a short distance in the air.",
+  "location": "Stardust Advent III (Prime Wars)"
+ },
+ "Disco Ball": {
+  "effect": "Whim: Utter Delight: extends the duration of other Whims.",
+  "location": "Événement « Hale's Moving House » / « Where Does Disco Go? »"
+ },
+ "Dreamcatcher": {
+  "effect": "Whim: Web of Silk: spits a spider web to restrain enemies when in danger.",
+  "location": "Mirage Monolith (Arachsiam)"
+ },
+ "Frog the Leaper": {
+  "effect": "Whim: Spring Legs: greatly enhances jump height (consumes stamina).",
+  "location": "Sommets de piles de voitures"
+ },
+ "Gingerbread House": {
+  "effect": "Tactical Item: Transformation Cookie: turns you into any object in the scene.",
+  "location": "Morphic Crates ou tâche « Morphic Decoy » (Lowe)"
+ },
+ "Harveseed": {
+  "effect": "Whim: Chloro-armor: when life is fading, new vitality is unleashed.",
+  "location": "Gaia Cliff Monolith (Treant)"
+ },
+ "Hug-in-a-Bowl": {
+  "effect": "Food: Homemade Noodles: restores Sanity to full.",
+  "location": "Cuisiner le plat Hug-in-a-Bowl"
+ },
+ "Ice Pot": {
+  "effect": "Sticky Ice Crystal: produces a magical adhesive ice block.",
+  "location": "Tâche « Deviation: Ice Pot » (Lowe)"
+ },
+ "Masonic Pyramid": {
+  "effect": "Whim: Predator: the first hit after leaving combat and diving is a guaranteed Crit.",
+  "location": "Stronghold Conquests (Iron River)"
+ },
+ "Orb Lightning": {
+  "effect": "Tactical Item: Lightning Bottle: boosts nearby Turrets.",
+  "location": "Rosetta Research Institutes, bases militaires"
+ },
+ "Party Monkey": {
+  "effect": "Formula: Party Monkey: facility that draws monster aggro nearby.",
+  "location": "Événements Production Facility"
+ },
+ "Pup Buddy": {
+  "effect": "Whim: Featherweight: Max Load increased.",
+  "location": "Jonathan (Greywater Camp), Blackfell, Evergreen"
+ },
+ "Snow Globe": {
+  "effect": "Formula: Snowball: Slowdown on hit, Frozen on multiple hits.",
+  "location": "Silo PSI"
+ },
+ "Space Turner": {
+  "effect": "Tactical Item: Space Twister: creates a Teleport Door and summons teammates.",
+  "location": "Mystical Crates"
+ },
+ "Strange Door": {
+  "effect": "Formula: Portal: teleportation between two doors.",
+  "location": "Blackheart, tâche « In The Tall Grass », Mystical Crates"
+ },
+ "Upper World Spawn": {
+  "effect": "Formula: Upper World Protection: immunity to some damage but no actions possible.",
+  "location": "Silo PSI"
+ },
+ "By-the-Wind": {
+  "effect": "Gravity Lift: creates a floating area on the ground. Combat Assist: floating zone under the player (fixed height), Movement Speed +20%, jump speed +2, immune to fall DMG and stagger.",
+  "location": "Prime War"
+ },
+ "ZapCam": {
+  "effect": "Manual Photograph: locks onto an enemy before dealing damage. Auto Photograph: teleports to targets and takes photos dealing Status DMG; the enemy receives +21.6% Weapon DMG.",
+  "location": "Tundra Monolith (Secret Servitor)",
+  "note": "Anciennement « Snapshot »"
+ },
+ "Fetch-A-Lot Bunny": {
+  "effect": "Collect from bushes: automatically gathers shrubs.",
+  "location": "Dracaena (Red Sands), Bald Cypress (Iron River)"
+ },
+ "Chaos - Mini Wonder": {
+  "effect": "Designated Target: buffs an ally. Bullet Absorption: absorbs bullets within a radius.",
+  "location": "Tâche « Other World Traveler » (Lowe)",
+  "note": "Variante de Mini Wonder (capacités de base identiques, valeurs pouvant différer)"
+ },
+ "Chaos Mr. Wish": {
+  "effect": "Rapid Fire: bursts at enemies near the crosshair, marking them with The Bull's Eye. Auto Attack.",
+  "location": "Silo SIGMA",
+  "note": "Variante de Mr. Wish (capacités de base identiques, valeurs pouvant différer)"
+ },
+ "Chaos Snowsprite": {
+  "effect": "Auto Attack: generates Ice Crystals near the target every 3s. Crystals shatter when shot, dealing 37.5% to 87.5% Frost DMG to nearby targets and making them take +18% to +42% Frost DMG.",
+  "location": "Tâche « Deviation: Snowsprite » (Lowe)",
+  "note": "Variante de Snowsprite (capacités de base identiques, valeurs pouvant différer)"
+ },
+ "Chaos Zeno-Purifier": {
+  "effect": "Designated Target + Auto Attack: lets the player teleport to the target with melee attacks.",
+  "location": "Objectif saisonnier « 200 ennemis en mêlée » ou coffres",
+  "note": "Variante de Zeno-Purifier (capacités de base identiques, valeurs pouvant différer)"
+ },
+ "Chaotic Extradimensional Cat": {
+  "effect": "Velvet Cushion: sleeps with its owner so they're fully energetic the next day.",
+  "location": "Près des tours de téléportation des bastions de l'Union",
+  "note": "Variante de Extradimensional Cat (capacités de base identiques, valeurs pouvant différer)"
+ },
+ "Azure Melody - Chefosaurus Rex": {
+  "effect": "Culinary Genius: increases cooking proficiency (scales with Deviant Energy).",
+  "location": "Tâche « There's a Dragon There » (Lowe) ou Silo PHI",
+  "note": "Variante de Chefosaurus Rex (capacités de base identiques, valeurs pouvant différer)"
+ }
+}

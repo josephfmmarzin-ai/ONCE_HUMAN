@@ -1,0 +1,440 @@
+{
+ "Lonewolf": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Magazine Capacity +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Crit Rate +5%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Gain 1 stack of Lone Shadow for every 4 Crit shots landed with a weapon. Lone Shadow: Crit DMG +6% for 20s, stacking up to 8 times."
+   },
+   {
+    "pieces": 4,
+    "effect": "Increases maximum Lonewolf stacks to 10. After reloading, gain Crit Rate +10% for 2s."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Shelterer": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Status DMG Reduction +15%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Element DMG (Blaze, Frost, Shock, Blast) +8%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Each weapon hit grants 1 stack of Deviant Energy. Every stack grants 1% Elemental DMG (Blaze, Frost, Shock, Blast), up to 20 stacks. Reloading removes half of the total stacks."
+   },
+   {
+    "pieces": 4,
+    "effect": "Increase max Deviant Energy stack by 10. Grant 2 additional stacks when hitting a weakspot."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Bastille": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "When HP is above 70%, Weapon DMG +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Reload Efficiency +15%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Stay crouched and immobile for 0.5s to enter the Bastille state: Weapon DMG +40%. After exiting, you cannot sprint and Stamina consumption is +100% for 3s."
+   },
+   {
+    "pieces": 4,
+    "effect": "3s after exiting Bastille state, gain 1 stack of Armor per second, up to 60. While in Bastille state, each stack provides a Shield equal to 1% of max HP."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Renegade": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Reload Efficiency +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Weakspot DMG +10%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Gain 1 stack of Archer's Focus upon hitting the same enemy consecutively. Archer's Focus: Weakspot DMG +4%, stacking up to 10 times. Stacks are halved upon changing targets."
+   },
+   {
+    "pieces": 4,
+    "effect": "When reloading, for every 1% of shots from the previous magazine that were Weakspot hits, load an extra 0.6% ammunition, capped at +30%."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Falcon": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Rolling Stamina cost -20%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Crit DMG +12%"
+   },
+   {
+    "pieces": 3,
+    "effect": "When Stamina is over 90%, Crit Rate +5% and Crit DMG +20%."
+   },
+   {
+    "pieces": 4,
+    "effect": "After killing an enemy, immediately recover 30 Stamina and gain +20% Movement Speed for 2s. Cooldown: 3s."
+   }
+  ],
+  "rarity": "epic",
+  "source": "oncehumandb.com"
+ },
+ "Blackstone": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Cold Resist and Heat Resist +2.5"
+   },
+   {
+    "pieces": 2,
+    "effect": "Upon dealing Elemental DMG, gain 1 stack of Warm Sensation (Elemental DMG +2%) for 2s. Triggers once every 0.5s, up to 5 stacks."
+   },
+   {
+    "pieces": 3,
+    "effect": "When the temperature is between 10°C and 30°C, you gain the Warm status (Elemental DMG +18%)."
+   },
+   {
+    "pieces": 4,
+    "effect": "At 5 stacks of Warm Sensation, you are considered to be in the Warm status. When the environmental temperature is between 10°C and 30°C, gain Elemental DMG +7%."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Savior": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Medicine CD Reduction +20%"
+   },
+   {
+    "pieces": 2,
+    "effect": "While shielded, Weapon DMG and Status DMG dealt +10%."
+   },
+   {
+    "pieces": 3,
+    "effect": "Consumes 6% of current HP on hit to generate a temporary shield equal to 6% of Max HP, lasting 30s (Cooldown 0.5s; does not trigger if Shield exceeds 60%)."
+   },
+   {
+    "pieces": 4,
+    "effect": "Automatically uses the lowest-grade Treatment in the backpack when HP is below 30% (Cooldown 40s)."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Stormweaver": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Rolling Stamina cost -20%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Magazine Capacity +15%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Taking DMG grants a stack of Powered Armor: DMG Reduction +4% for 10s, up to 6 stacks."
+   },
+   {
+    "pieces": 4,
+    "effect": "Rolling consumes 3 stacks of Powered Armor and triggers an explosion that knocks back surrounding enemies. For each enemy hit, HP +5%, up to 20% (cooldown 10s)."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Treacherous Tides": {
+  "bonus": [
+   {
+    "pieces": 2,
+    "effect": "Movement Speed +8%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Max Load +40"
+   },
+   {
+    "pieces": 4,
+    "effect": "Logging and Mining Speed +25%"
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Gravity Tide": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Jump Height +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Magazine Capacity +15%"
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Agent": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Head DMG Reduction +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Weakspot DMG +10%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Get Bullet Saver effect with every precise kill: Weakspot DMG +15% for 8s, up to 3 stacks."
+   },
+   {
+    "pieces": 4,
+    "effect": "After killing an enemy, gain Reload Efficiency +20%. If it is a Weakspot kill, also gain Fire Rate +10%. Lasts until you reload."
+   }
+  ],
+  "rarity": "epic",
+  "source": "oncehumandb.com"
+ },
+ "Heavy Duty": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Max HP +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Element DMG (Blaze, Frost, Shock, Blast) +8%"
+   },
+   {
+    "pieces": 3,
+    "effect": "After killing an enemy, Movement Speed +20% for 2s and Elemental DMG (Blaze, Frost, Shock, Blast) +40%, decaying over 8s."
+   },
+   {
+    "pieces": 4,
+    "effect": "Within 5m, each enemy grants you DMG Reduction +4%, up to 4 stacks."
+   }
+  ],
+  "rarity": "epic",
+  "source": "oncehumandb.com"
+ },
+ "Blast": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Heavy Melee DMG +20%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Torso DMG Reduction +12%"
+   },
+   {
+    "pieces": 3,
+    "effect": "After using Melee attack to kill an enemy, instantly gain 5 Prime Energy, and DMG of your next Melee attack +20% within 5s."
+   },
+   {
+    "pieces": 4,
+    "effect": "Melee kill an enemy to instantly recover 30 Stamina and Movement Speed +20% for 2s (cooldown 3s)."
+   }
+  ],
+  "rarity": "rare",
+  "source": "oncehumandb.com"
+ },
+ "Raid": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Gathering Speed +15%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Max Load +20"
+   },
+   {
+    "pieces": 3,
+    "effect": "When the load is over 80, DMG taken -10%, Weapon and Tactical Item DMG +15%"
+   },
+   {
+    "pieces": 4,
+    "effect": "Stamina cost -30% when gliding and rolling"
+   }
+  ],
+  "rarity": "rare",
+  "source": "oncehumandb.com"
+ },
+ "Scout": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Max HP +10%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Weapon DMG +8%"
+   },
+   {
+    "pieces": 3,
+    "effect": "Weapon and Tactical Item DMG +20% when not spotted by enemies"
+   },
+   {
+    "pieces": 4,
+    "effect": "Sprint Speed +12% and Stamina Recovery Speed +20% when HP is below 50%"
+   }
+  ],
+  "rarity": "rare",
+  "source": "oncehumandb.com"
+ },
+ "Blackstone (Cold)": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Cold Resist +5"
+   },
+   {
+    "pieces": 2,
+    "effect": "Upon dealing Elemental DMG, gain 1 stack of Warm Sensation (Elemental DMG +2%) for 2s. Triggers once every 0.5s, up to 5 stacks."
+   },
+   {
+    "pieces": 3,
+    "effect": "When the temperature is below 10°C, gain Cold status (Elemental DMG +10%). For every additional degree below, Elemental DMG +0.5%, up to 20%."
+   },
+   {
+    "pieces": 4,
+    "effect": "At 5 stacks of Warm Sensation, the environmental temperature drops by 5°C, the Cold status DMG bonus is doubled and its cap raised to 40%."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Blackstone (Heat)": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Heat Resist +5"
+   },
+   {
+    "pieces": 2,
+    "effect": "Upon dealing Elemental DMG, gain 1 stack of Warm Sensation (Elemental DMG +2%) for 2s. Triggers once every 0.5s, up to 5 stacks."
+   },
+   {
+    "pieces": 3,
+    "effect": "When the temperature is above 30°C, gain Passion status (Elemental DMG +10%). For every additional degree above, Elemental DMG +0.5%, up to 20%."
+   },
+   {
+    "pieces": 4,
+    "effect": "At 5 stacks of Warm Sensation, the environmental temperature rises by 5°C, the Passion status DMG bonus is doubled and its cap raised to 40%."
+   }
+  ],
+  "rarity": "legendary",
+  "source": "oncehumandb.com"
+ },
+ "Snow Panther": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Torso DMG Reduction +10%"
+   }
+  ],
+  "rarity": "epic",
+  "source": "oncehumandb.com"
+ },
+ "Rustic": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Movement Speed +8%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Melee DMG +15%"
+   },
+   {
+    "pieces": 3,
+    "effect": "HP +600"
+   },
+   {
+    "pieces": 4,
+    "effect": "Gathering Speed +20%"
+   }
+  ],
+  "rarity": "uncommon",
+  "source": "oncehumandb.com"
+ },
+ "Snowland Rustic": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Movement Speed +8%"
+   },
+   {
+    "pieces": 2,
+    "effect": "Cold Resist +5"
+   },
+   {
+    "pieces": 3,
+    "effect": "HP +600"
+   },
+   {
+    "pieces": 4,
+    "effect": "Gathering Speed +20%"
+   }
+  ],
+  "rarity": "uncommon",
+  "source": "oncehumandb.com"
+ },
+ "Dark Resonance": {
+  "bonus": [
+   {
+    "pieces": 1,
+    "effect": "Bouclier pendant l'utilisation de l'Ultime de déviation (résumé, texte exact à vérifier en jeu)"
+   },
+   {
+    "pieces": 2,
+    "effect": "Bonus de dégâts quand la Puissance déviante n'est pas pleine (résumé)"
+   },
+   {
+    "pieces": 3,
+    "effect": "Bonus de dégâts proportionnel à la Puissance déviante consommée (résumé)"
+   },
+   {
+    "pieces": 4,
+    "effect": "Après une compétence de combat de déviation, consomme de la Puissance déviante pour réduire les temps de recharge (résumé)"
+   }
+  ],
+  "rarity": "legendary",
+  "source": "mmorpg.com (résumé de la mise à jour du 21/01/2026)"
+ }
+}

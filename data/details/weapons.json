@@ -1,0 +1,1346 @@
+{
+ "socr-the-last-valor": {
+  "mag": 30,
+  "critRate": "6%",
+  "critDmg": "27%",
+  "weakspotDmg": "60%",
+  "range": 75,
+  "rangeEff": "27m",
+  "reload": 56,
+  "reloadSec": "2.3s",
+  "mobility": 54,
+  "ads": "0.23s",
+  "ammo": "Rifle Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "27m / 76m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Rifle Amplify",
+   "Precise Shot"
+  ],
+  "description": "SOCR Assault Rifle with high accuracy, perfect for mid to long-range combat",
+  "effectName": "Shrapnel",
+  "effect": "Toucher 4 fois déclenche Shrapnel (un coup critique compte pour 2 touches). Après un coup critique, Shrapnel se déclenche 1 fois de plus pendant 1 s. Dég crit de Shrapnel +30%. Shrapnel : à l'impact, inflige 60% de l'Attaque en dég d'arme sur une autre partie aléatoire de l'ennemi (même élément que l'arme, peut critiquer et toucher les points faibles, décroît avec la distance).",
+  "effectSource": "wikily.gg",
+  "source": "oncehumandb.com",
+  "effectEn": "Hitting 4 times triggers Shrapnel (a Crit hit counts as 2 hits). After a Crit hit, Shrapnel triggers 1 additional time for 1s. Shrapnel Crit DMG +30%. Shrapnel: on hit, deals Weapon DMG equal to 60% of Attack to another random body part of the enemy (same element as the weapon, can Crit and hit Weakspots, decays with distance)."
+ },
+ "kvd-boom-boom": {
+  "mag": 100,
+  "critRate": "10%",
+  "critDmg": "30%",
+  "weakspotDmg": "40%",
+  "range": 59,
+  "rangeEff": "27m",
+  "reload": 24,
+  "reloadSec": "5.1s",
+  "mobility": 36,
+  "ads": "0.26s",
+  "ammo": "Light Machine Gun Bullet",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "27m / 81m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "LMG Reload Boost",
+   "Speedy Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "KVD Light Machine Gun packs a hefty magazine, perfect for sustained combat with targets at medium to long range",
+  "source": "oncehumandb.com",
+  "effectName": "Burn",
+  "effect": "À chaque coup, chance (≈18%) d'enflammer la cible (Burn). Vaincre un ennemi enflammé le fait exploser et propage Burn aux cibles proches. Excellent contre les groupes et les boss.",
+  "effectSource": "hardcoregamer.com / oncehumandb.com (résumé, texte exact à vérifier en jeu)",
+  "effectEn": "Each hit has a chance (~18%) to set the target on fire (Burn). Defeating a burning enemy makes it explode and spreads Burn to nearby targets. Excellent against groups and bosses."
+ },
+ "kam-abyss-glance": {
+  "mag": 40,
+  "critRate": "6%",
+  "critDmg": "30%",
+  "weakspotDmg": "55%",
+  "range": 63,
+  "rangeEff": "27m",
+  "reload": 38,
+  "reloadSec": "3.1s",
+  "mobility": 51,
+  "ads": "0.23s",
+  "ammo": "Rifle Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "27m / 76m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Rifle Amplify",
+   "Precise Shot"
+  ],
+  "description": "KAM Assault Rifle packs a punch with its hefty recoil but delivers reliable sustained fire, making it ideal for mid-range combat",
+  "source": "oncehumandb.com",
+  "effectName": "Frost Vortex",
+  "effect": "À chaque coup, déclenche Frost Vortex (recharge 7 s ; 30% de dégâts contre les Métas). Chaque coup réduit la recharge de 0,5 s. Toucher un non-Méta dans le vortex augmente ses dégâts finaux de +5% (max 10 stacks). Dég élémentaires Frost +30%, fréquence de dégâts du vortex +100%. Frost Vortex : zone de 4,5 m qui piège et ralentit, 50% de l'Intensité PSI en dég de statut toutes les 0,5 s pendant 4 s (1 vortex à la fois ; ne crit pas).",
+  "effectSource": "wikily.gg",
+  "effectEn": "When a weapon hits, trigger Frost Vortex with a 7s cooldown (Vortex triggered on Metas deals 30% damage). Each weapon hit reduces the cooldown by 0.5s. Hitting non-Metas inside the Frost Vortex increases its final damage by +5%, up to 10 stacks. Frost Elemental DMG +30%, Frost Vortex damage frequency +100%. Frost Vortex: 4.5m area that traps and slows, 50% Psi Intensity Status DMG per 0.5s for 4s (1 vortex at a time; cannot Crit)."
+ },
+ "ultra-force": {
+  "mag": 36,
+  "range": 77,
+  "rangeEff": "27m",
+  "reload": 61,
+  "reloadSec": "2.1s",
+  "mobility": 48,
+  "ads": "0.24s",
+  "ammo": "Rifle Ammo",
+  "fireMode": "Full-Auto",
+  "falloff": "27m / 76m / 30%",
+  "overrides": [
+   "Rifle Amplify",
+   "Precise Shot"
+  ],
+  "description": "Pas de recette de fabrication (arme obtenue en jeu, non craftable).",
+  "source": "oncehumandb.com"
+ },
+ "mps7-chaos-domain": {
+  "mag": 35,
+  "range": 47,
+  "rangeEff": "16m",
+  "reload": 32,
+  "reloadSec": "3s",
+  "mobility": 68,
+  "ads": "0.2s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "16m / 44m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Recoil Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Short Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "MPS7 Submachine Gun: compact, lightweight, with a rapid fire rate, perfect for mid to close-range combat",
+  "source": "oncehumandb.com"
+ },
+ "mps7-outer-space": {
+  "mag": 35,
+  "critRate": "8%",
+  "critDmg": "30%",
+  "weakspotDmg": "50%",
+  "range": 45,
+  "rangeEff": "16m",
+  "reload": 32,
+  "reloadSec": "3s",
+  "mobility": 74,
+  "ads": "0.19s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "16m / 44m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Blowback Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "MPS7 Submachine Gun: compact, lightweight, with a rapid fire rate, perfect for mid to close-range combat",
+  "source": "oncehumandb.com",
+  "effectName": "Power Surge",
+  "effect": "25% de chance de déclencher Power Surge à chaque coup. Après avoir vaincu un ennemi, facteur de déclenchement +30% pendant 12 s. Après un rechargement, facteur de déclenchement +40% pendant 3 s. Facteur de déclenchement Power Surge +40%.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "25% chance to trigger Power Surge on each hit. After defeating an enemy, trigger factor +30% for 12s. After reloading, trigger factor +40% for 3s. Power Surge trigger factor +40%."
+ },
+ "mps5-kumawink": {
+  "mag": 30,
+  "critRate": "8%",
+  "critDmg": "30%",
+  "weakspotDmg": "55%",
+  "range": 68,
+  "rangeEff": "18m",
+  "reload": 43,
+  "reloadSec": "2.3s",
+  "mobility": 60,
+  "ads": "0.21s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "18m / 50m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Blowback Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "MPS5 SMG with precision and stability rolled into one, excels in mid to close-range combat",
+  "source": "oncehumandb.com",
+  "effectName": "Bounce",
+  "effect": "25% de chance de déclencher Bounce à chaque coup. Quand Bounce touche, ricochet infligeant 100% des dég de Bounce à la cible d'origine. Après un rechargement, 1 déclenchement de Bounce supplémentaire pendant 6 s (perdu en changeant d'arme). Multiplicateur de dég de Bounce +75%, cibles de Bounce +3. Bounce : ricoche sur un ennemi aléatoire à 15 m puis rebondit encore, chaque rebond = 40% des dég d'arme (peut critiquer et toucher les points faibles).",
+  "effectSource": "wikily.gg / once-human.fandom.com",
+  "effectEn": "When the weapon hits a target, 25% chance to trigger Bounce. When Bounce hits, it ricochets, dealing 100% of Bounce damage to the target that triggered Bounce. After reloading, 1 additional Bounce trigger for 6s (removed on weapon swap). Bounce damage multiplier +75%, single Bounce targets +3. Bounce: ricochets to a random enemy within 15m then bounces again, each bounce = 40% of Weapon DMG (can Crit and hit Weakspots)."
+ },
+ "mps5-primal-rage": {
+  "mag": 30,
+  "critRate": "8%",
+  "critDmg": "30%",
+  "weakspotDmg": "55%",
+  "range": 68,
+  "rangeEff": "18m",
+  "reload": 43,
+  "reloadSec": "2.3s",
+  "mobility": 60,
+  "ads": "0.21s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "18m / 50m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Blowback Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "MPS5 SMG with precision and stability rolled into one, excels in mid to close-range combat",
+  "source": "oncehumandb.com"
+ },
+ "tec9-additional-rules": {
+  "mag": 30,
+  "critRate": "10%",
+  "critDmg": "30%",
+  "weakspotDmg": "45%",
+  "range": 75,
+  "rangeEff": "17m",
+  "reload": 35,
+  "reloadSec": "2.2s",
+  "mobility": 80,
+  "ads": "0.18s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "17m / 47m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Blowback Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "TEC9 Submachine Gun, slow Fire Rate and short range but highly maneuverable, suitable for early-game transitions and close-quarters assault combat.",
+  "source": "oncehumandb.com"
+ },
+ "mg4-predator": {
+  "mag": 75,
+  "critRate": "8%",
+  "critDmg": "30%",
+  "weakspotDmg": "35%",
+  "range": 45,
+  "rangeEff": "31m",
+  "reload": 48,
+  "reloadSec": "4.1s",
+  "mobility": 33,
+  "ads": "0.26s",
+  "ammo": "Light Machine Gun Bullet",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "31m / 93m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "LMG Reload Boost",
+   "Speedy Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "MG4 Light Machine Gun, perfect for laying down continuous fire on mid to long-range targets",
+  "source": "oncehumandb.com",
+  "effectName": "Fast Gunner",
+  "effect": "40% de chance de déclencher Fast Gunner à chaque coup (chaque stack : cadence +1% et Attaque +1% pendant 2 s, max 5). À chaque multiple de 5 stacks, munitions infinies pendant 0,5 s. Toucher la même cible en continu donne dég d'arme +2% par coup (max +40%, remis à zéro en changeant de cible). Quand il reste plus de 50% du chargeur, Attaque +40%.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "40% chance to trigger Fast Gunner on each hit (each stack: Fire Rate +1% and Attack +1% for 2s, max 5). At every 5 stacks, infinite ammo for 0.5s. Hitting the same target continuously grants Weapon DMG +2% per hit (max +40%, resets on target change). While more than 50% of the magazine remains, Attack +40%."
+ },
+ "mg4-conflicting-memories": {
+  "mag": 75,
+  "critRate": "8%",
+  "critDmg": "30%",
+  "weakspotDmg": "35%",
+  "range": 45,
+  "rangeEff": "31m",
+  "reload": 48,
+  "reloadSec": "4.1s",
+  "mobility": 33,
+  "ads": "0.26s",
+  "ammo": "Light Machine Gun Bullet",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "31m / 93m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "LMG Reload Boost",
+   "Speedy Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "MG4 Light Machine Gun, perfect for laying down continuous fire on mid to long-range targets",
+  "source": "oncehumandb.com"
+ },
+ "aurora-fort": {
+  "mag": 90,
+  "range": 47,
+  "rangeEff": "29m",
+  "reload": 40,
+  "reloadSec": "4.5s",
+  "mobility": 33,
+  "ads": "0.26s",
+  "ammo": "Light Machine Gun Bullet",
+  "fireMode": "Full-Auto",
+  "falloff": "29m / 87m / 30%",
+  "overrides": [
+   "LMG Reload Boost",
+   "Speedy Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "Pas de recette de fabrication (arme obtenue en jeu, non craftable).",
+  "source": "oncehumandb.com"
+ },
+ "aws-338-bullseye": {
+  "mag": 5,
+  "critRate": "2%",
+  "critDmg": "26%",
+  "weakspotDmg": "95%",
+  "range": 72,
+  "rangeEff": "58m",
+  "reload": 42,
+  "reloadSec": "3.6s",
+  "mobility": 44,
+  "ads": "0.24s",
+  "ammo": "SR Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "58m / 106m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Sniper Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Bolt Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Sniper Rifle Crit Boost",
+   "Speedy Shot",
+   "Sniper Rifle Weakspot DMG Boost",
+   "Long-Range Enhancement",
+   "Anti-Phase"
+  ],
+  "description": "AWS.338 Bolt-Action Sniper Rifle, with long Range, high Power, and pinpoint accuracy, perfect for long-distance precision firing",
+  "source": "oncehumandb.com",
+  "effectName": "The Bull's Eye",
+  "effect": "70% de chance d'appliquer The Bull's Eye sur un coup au point faible. Après un changement d'arme, le premier coup applique The Bull's Eye. À chaque coup, dég point faible +15% pendant 10 s (cumulable 3 fois). Après avoir vaincu un ennemi d'un coup au point faible, Attaque +15% pendant 20 s. The Bull's Eye : la cible est marquée et subit Vulnérabilité +8% pendant 12 s.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "70% chance to apply The Bull's Eye on a Weakspot hit. After switching weapons, the first hit applies The Bull's Eye. On every hit, Weakspot DMG +15% for 10s (up to 3 stacks). After defeating an enemy with a Weakspot hit, Attack +15% for 20s. The Bull's Eye: the target is marked and takes Vulnerability +8% for 12s."
+ },
+ "hamr-brahminy": {
+  "mag": 8,
+  "critRate": "2%",
+  "critDmg": "30%",
+  "weakspotDmg": "80%",
+  "range": 66,
+  "rangeEff": "56m",
+  "reload": 24,
+  "reloadSec": "3.4s",
+  "mobility": 33,
+  "ads": "0.26s",
+  "ammo": "SR Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "56m / 102m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Sniper Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Sniper Rifle Crit Boost",
+   "Speedy Shot",
+   "Sniper Rifle Weakspot DMG Boost",
+   "Long-Range Enhancement",
+   "Anti-Phase"
+  ],
+  "description": "HAMR Heavy Sniper Rifle, delivers semi-automatic fire to engage distant targets in rapid succession",
+  "source": "oncehumandb.com",
+  "effectName": "Bounce",
+  "effect": "80% de chance de déclencher Bounce sur un coup au point faible (la balle ricoche sur un ennemi aléatoire à 10 m et inflige 60% de l'Attaque en dég d'arme). Si Bounce touche un point faible, 35% de chance de ricocher encore. Si Bounce ne tue pas ou n'a pas de cible, la balle suivante fait dég d'arme +20% (max 5 stacks). Bounce vise en priorité les ennemis avec le plus de PV.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "80% chance to trigger Bounce on a Weakspot hit (the bullet ricochets to a random enemy within 10m dealing 60% of Attack as Weapon DMG). If Bounce hits a Weakspot, 35% chance to ricochet again. If Bounce does not kill or has no target, the next bullet deals Weapon DMG +20% (max 5 stacks). Bounce prioritizes enemies with the most HP."
+ },
+ "hamr-hannya": {
+  "mag": 8,
+  "range": 66,
+  "rangeEff": "56m",
+  "reload": 24,
+  "reloadSec": "3.4s",
+  "mobility": 33,
+  "ads": "0.26s",
+  "ammo": "SR Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "56m / 102m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Sniper Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Sniper Rifle Crit Boost",
+   "Speedy Shot",
+   "Sniper Rifle Weakspot DMG Boost",
+   "Long-Range Enhancement",
+   "Anti-Phase"
+  ],
+  "description": "HAMR Heavy Sniper Rifle, delivers semi-automatic fire to engage distant targets in rapid succession",
+  "source": "oncehumandb.com"
+ },
+ "r500-memento": {
+  "mag": 5,
+  "critRate": "4%",
+  "critDmg": "25%",
+  "weakspotDmg": "65%",
+  "range": 79,
+  "rangeEff": "23m",
+  "reload": 45,
+  "reloadSec": "2.3s",
+  "mobility": 68,
+  "ads": "0.2s",
+  "ammo": "Pistol Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "23m / 37m / 25%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "R500 Frame I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Revolver Action I",
+    "qty": 1
+   },
+   {
+    "name": "R500 Magazine I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Pistol DMG Boost",
+   "Speedy Shot",
+   "Handgun Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "High-Power R500 Pistol, limited ammo capacity, slower fire rate, good for mid-range combat",
+  "source": "oncehumandb.com"
+ },
+ "de-50-jaws": {
+  "mag": 9,
+  "critRate": "6%",
+  "critDmg": "25%",
+  "weakspotDmg": "60%",
+  "range": 44,
+  "rangeEff": "20m",
+  "reload": 60,
+  "reloadSec": "1.8s",
+  "mobility": 73,
+  "ads": "0.19s",
+  "ammo": "Pistol Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "20m / 32m / 25%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Pistol Frame I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Recoil Action I",
+    "qty": 1
+   },
+   {
+    "name": "Pistol Slide I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Pistol DMG Boost",
+   "Speedy Shot",
+   "Handgun Enhancement",
+   "Anti-Regen",
+   "Anti-Coherence"
+  ],
+  "description": "Kestrel Pistol packs a heavy kick. It requires a steady hand to stay on target at mid-range fire.",
+  "source": "oncehumandb.com",
+  "effectName": "Unstable Bomber",
+  "effect": "Unstable Bomber se déclenche tous les 4 tirs (un critique compte pour 1 tir). Après un coup au point faible, dég élémentaire Explosion +30% pendant 8 s. Unstable Bomber peut critiquer, taux crit +25%. Unstable Bomber : explosion de 100% de l'Intensité PSI en dég de statut après 0,1 s dans un rayon de 1,5 m (décroît jusqu'à 50% en bord de zone).",
+  "effectSource": "bluestacks.com",
+  "effectEn": "Unstable Bomber triggers every 4 shots (a Crit counts as 1 shot). After a Weakspot hit, Blast Elemental DMG +30% for 8s. Unstable Bomber can Crit, Crit Rate +25%. Unstable Bomber: explosion dealing 100% of Psi Intensity as Status DMG after 0.1s within 1.5m (decays to 50% at the edge)."
+ },
+ "dbsg-doombringer": {
+  "mag": 2,
+  "pellets": 6,
+  "critRate": "10%",
+  "critDmg": "30%",
+  "weakspotDmg": "25%",
+  "range": 30,
+  "rangeEff": "7m",
+  "reload": 65,
+  "reloadSec": "2.1s",
+  "mobility": 66,
+  "ads": "0.2s",
+  "ammo": "Shotgun Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "7m / 13m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "DBSG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pump Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "DBSG I (craftable)",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Shotgun Amplify",
+   "Precise Shot",
+   "Handgun Enhancement",
+   "Anti-Void",
+   "Anti-Void: Shotgun"
+  ],
+  "description": "DBSG, limited to two bullets, designed for short-range explosive hits in quick succession",
+  "source": "oncehumandb.com",
+  "effectName": "The Bull's Eye",
+  "effect": "30% de chance d'appliquer The Bull's Eye à chaque coup (80% à moins de 5 m). Vaincre un ennemi marqué donne Attaque +6 pendant 60 s (max 5 stacks). Après déclenchement, réduction de dég +5% pendant 8 s (max 4 stacks). Taux crit +30% contre les ennemis marqués.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "30% chance to apply The Bull's Eye on each hit (80% within 5m). Defeating a marked enemy grants Attack +6 for 60s (max 5 stacks). After triggering, DMG Reduction +5% for 8s (max 4 stacks). Crit Rate +30% against marked enemies."
+ },
+ "dbsg-format": {
+  "mag": 2,
+  "pellets": 6,
+  "range": 46,
+  "rangeEff": "7m",
+  "reload": 53,
+  "reloadSec": "2.1s",
+  "mobility": 60,
+  "ads": "0.21s",
+  "ammo": "Shotgun Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "7m / 13m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "DBSG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pump Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "DBSG I (craftable)",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Shotgun Amplify",
+   "Precise Shot",
+   "Handgun Enhancement",
+   "Anti-Void",
+   "Anti-Void: Shotgun"
+  ],
+  "description": "DBSG, limited to two bullets, designed for short-range explosive hits in quick succession",
+  "source": "oncehumandb.com"
+ },
+ "db12-raining-cash": {
+  "mag": 12,
+  "pellets": 5,
+  "critRate": "8%",
+  "critDmg": "28%",
+  "weakspotDmg": "20%",
+  "range": 54,
+  "rangeEff": "7m",
+  "reload": 49,
+  "reloadSec": "0.5s",
+  "mobility": 53,
+  "ads": "0.23s",
+  "ammo": "Shotgun Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "7m / 13m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Bullpup Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pump Action I",
+    "qty": 1
+   },
+   {
+    "name": "DBSG I (craftable)",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Shotgun Amplify",
+   "Precise Shot",
+   "Handgun Enhancement",
+   "Anti-Void",
+   "Anti-Void: Shotgun"
+  ],
+  "description": "DB12 Double-Barrel Pump Shotgun that unleash two bullets in quick succession, giving you some extra leeway in up-close encounters",
+  "source": "oncehumandb.com",
+  "effectName": "Fortress Warfare",
+  "effect": "Recharger déclenche Fortress Warfare (zone de 2 m, les alliés dedans gagnent une armure lourde : dég d'arme +20% ; recharge 10 s). Plus la zone est maintenue longtemps, plus l'Attaque monte (max +40%). Dans la zone : taux crit +30% et réduction de dég +30%.",
+  "effectSource": "bluestacks.com",
+  "effectEn": "Reloading triggers Fortress Warfare (2m zone; allies inside gain heavy armor: Weapon DMG +20%; cooldown 10s). The longer the zone is held, the higher the Attack (max +40%). Inside the zone: Crit Rate +30% and DMG Reduction +30%."
+ },
+ "critical-pulse": {
+  "mag": 1,
+  "critRate": "2%",
+  "critDmg": "28%",
+  "weakspotDmg": "70%",
+  "range": 64,
+  "rangeEff": "19m",
+  "reload": 75,
+  "reloadSec": "2.6s",
+  "mobility": 60,
+  "ads": "0.21s",
+  "ammo": "Arrow",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "19m / 30m / 25%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Copper Ingot",
+    "qty": 10
+   },
+   {
+    "name": "Metal Scraps",
+    "qty": 15
+   },
+   {
+    "name": "Rusted Part",
+    "qty": 6
+   },
+   {
+    "name": "Shabby Fabric",
+    "qty": 4
+   },
+   {
+    "name": "Stardust Source",
+    "qty": 15
+   }
+  ],
+  "overrides": [
+   "Crossbow DMG Boost",
+   "Speedy Shot",
+   "Long-Range Enhancement",
+   "Anti-Phase",
+   "Anti-Coherence: Crossbow"
+  ],
+  "source": "oncehumandb.com",
+  "effectName": "Power Surge",
+  "effect": "Chaque coup déclenche Power Surge (dég de statut jusqu'à 50% de l'Intensité PSI, réduit la précision de la cible pendant 6 s). Les déclenchements se cumulent : cadence de zaps accélérée, et à haut niveau de charge, les attaques génèrent des orbes de foudre qui infligent des dég de Shock en zone (résumé de guides ; texte exact à vérifier en jeu).",
+  "effectSource": "sportskeeda.com / game8.co (résumé)",
+  "effectEn": "Every hit triggers Power Surge (Status DMG up to 50% of Psi Intensity, reduces target accuracy for 6s). Triggers stack: faster zaps, and at high charge your attacks spawn lightning orbs dealing AoE Shock DMG (summary from guides; exact text to verify in game)."
+ },
+ "compound-bow": {
+  "mag": 1,
+  "critRate": "2%",
+  "critDmg": "28%",
+  "weakspotDmg": "70%",
+  "range": 64,
+  "rangeEff": "19m",
+  "reload": 75,
+  "reloadSec": "2.6s",
+  "mobility": 60,
+  "ads": "0.21s",
+  "ammo": "Arrow",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "19m / 30m / 25%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Copper Ingot",
+    "qty": 10
+   },
+   {
+    "name": "Metal Scraps",
+    "qty": 15
+   },
+   {
+    "name": "Rusted Part",
+    "qty": 6
+   },
+   {
+    "name": "Shabby Fabric",
+    "qty": 4
+   },
+   {
+    "name": "Stardust Source",
+    "qty": 15
+   }
+  ],
+  "overrides": [
+   "Crossbow DMG Boost",
+   "Speedy Shot",
+   "Long-Range Enhancement",
+   "Anti-Phase",
+   "Anti-Coherence: Crossbow"
+  ],
+  "source": "oncehumandb.com"
+ },
+ "scourge": {
+  "critRate": "5%",
+  "critDmg": "25%",
+  "weakspotDmg": "20%",
+  "perkSlots": 6,
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Copper Ingot",
+    "qty": 10
+   },
+   {
+    "name": "Metal Scraps",
+    "qty": 15
+   },
+   {
+    "name": "Rubber",
+    "qty": 15
+   },
+   {
+    "name": "Stardust Source",
+    "qty": 7
+   }
+  ],
+  "overrides": [
+   "Melee Attack Boost",
+   "Brawl Boost",
+   "Robust",
+   "Ammo Cascade",
+   "Melee Enhancement"
+  ],
+  "description": "One of the easiest Melee Weapons to come by. Grab one and put it to use.",
+  "source": "oncehumandb.com"
+ },
+ "m416-silent-anabasis": {
+  "mag": 36,
+  "critRate": "6%",
+  "critDmg": "27%",
+  "weakspotDmg": "60%",
+  "range": 40,
+  "rangeEff": "26m",
+  "reload": 55,
+  "reloadSec": "2.3s",
+  "mobility": 55,
+  "ads": "0.22s",
+  "ammo": "Rifle Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "26m / 73m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Rifle Amplify",
+   "Precise Shot"
+  ],
+  "description": "M416 Assault Rifle with pinpoint accuracy, rock-steady, your go-to for mid to long-range combat",
+  "source": "oncehumandb.com",
+  "effectName": "Frost Vortex / Ice Crystals",
+  "effect": "À chaque coup, 10% de chance de déclencher Frost Vortex, et les coups font apparaître des cristaux de glace autour des ennemis. Les cristaux explosent seuls ou peuvent être brisés manuellement (en tirant dessus) pour infliger 300% de l'Intensité PSI en dég de Frost. Orientée cible unique plutôt que zone (résumé de guides ; texte exact à vérifier en jeu).",
+  "effectSource": "game8.co (résumé)",
+  "effectEn": "Each hit has a 10% chance to trigger Frost Vortex, and hits spawn Ice Crystals around enemies. Crystals explode on their own or can be shattered manually (by shooting them) to deal 300% Psi Intensity Frost DMG. Single-target oriented rather than AoE (summary from guides; exact text to verify in game)."
+ },
+ "acs12-corrosion": {
+  "mag": 8,
+  "pellets": 5,
+  "critRate": "8%",
+  "critDmg": "27%",
+  "weakspotDmg": "15%",
+  "range": 41,
+  "rangeEff": "7m",
+  "reload": 33,
+  "reloadSec": "2.4s",
+  "mobility": 50,
+  "ads": "0.23s",
+  "ammo": "Shotgun Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "7m / 13m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Shotgun Amplify",
+   "Precise Shot",
+   "Handgun Enhancement",
+   "Anti-Void",
+   "Anti-Void: Shotgun"
+  ],
+  "description": "ACS12 Auto Shotgun, with its high-capacity drum mag, blasts a rapid fire rate perfect for close-quarters combat",
+  "effectName": "Power Surge",
+  "effect": "Quand une balle touche, 80% de chance de déclencher Power Surge (n'applique plus le statut sur les non Méta-humains). Power Surge peut faire des coups critiques, taux crit Power Surge +25% (cumulable avec le crit du perso). Après déclenchement sur non Méta-humain, dég crit Power Surge +40% pendant 6 s, cumulable 5 fois. Facteur de dég Power Surge +15%.",
+  "effectSource": "once-human.fandom.com",
+  "source": "oncehumandb.com",
+  "effectEn": "When a bullet hits, 80% chance to trigger Power Surge (no longer applies the status on non-Meta-Humans). Power Surge can Crit, Power Surge Crit Rate +25% (stacks with character Crit). After triggering on a non-Meta-Human, Power Surge Crit DMG +40% for 6s, up to 5 stacks. Power Surge DMG factor +15%."
+ },
+ "acs12-pyroclasm-starter": {
+  "mag": 8,
+  "pellets": 5,
+  "critRate": "8%",
+  "critDmg": "27%",
+  "weakspotDmg": "15%",
+  "range": 40,
+  "rangeEff": "7m",
+  "reload": 33,
+  "reloadSec": "2.4s",
+  "mobility": 50,
+  "ads": "0.23s",
+  "ammo": "Shotgun Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "7m / 13m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Shotgun Amplify",
+   "Precise Shot",
+   "Handgun Enhancement",
+   "Anti-Void",
+   "Anti-Void: Shotgun"
+  ],
+  "description": "ACS12 Auto Shotgun, with its high-capacity drum mag, blasts a rapid fire rate perfect for close-quarters combat",
+  "effectName": "Burn",
+  "effect": "Chance de déclencher Burn à chaque tir (≈27% par coup d'après le guide OHDB).",
+  "effectSource": "oncehumandb.com/guides/best-weapons",
+  "source": "oncehumandb.com",
+  "effectEn": "Chance to trigger Burn on every shot (~27% per hit according to the OHDB guide)."
+ },
+ "ebr-14-octopus-grilled-rings": {
+  "mag": 20,
+  "critRate": "5%",
+  "critDmg": "40%",
+  "weakspotDmg": "50%",
+  "range": 45,
+  "rangeEff": "51m",
+  "reload": 80,
+  "reloadSec": "3s",
+  "mobility": 50,
+  "ads": "0.23s",
+  "ammo": "SR Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "51m / 93m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Sniper Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Sniper Rifle Crit Boost",
+   "Speedy Shot",
+   "Sniper Rifle Weakspot DMG Boost",
+   "Long-Range Enhancement",
+   "Anti-Phase"
+  ],
+  "description": "EBR-14 semi-automatic Assault Rifle. Stable recoil and fast Fire Rate, ideal for sustained suppression of mid-to-long-range objectives.",
+  "source": "oncehumandb.com"
+ },
+ "sks-pathfinder": {
+  "mag": 20,
+  "critRate": "5%",
+  "critDmg": "40%",
+  "weakspotDmg": "50%",
+  "range": 39,
+  "rangeEff": "51m",
+  "reload": 75,
+  "reloadSec": "3s",
+  "mobility": 45,
+  "ads": "0.24s",
+  "ammo": "SR Ammo",
+  "fireMode": "Semi-Auto",
+  "perkSlots": 6,
+  "falloff": "51m / 93m / 10%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "Sniper Rifle Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Pneumatic Action I",
+    "qty": 1
+   },
+   {
+    "name": "Fixed Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Long Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "Sniper Rifle Crit Boost",
+   "Speedy Shot",
+   "Sniper Rifle Weakspot DMG Boost",
+   "Long-Range Enhancement",
+   "Anti-Phase"
+  ],
+  "description": "SKS semi-automatic Assault Rifle. High recoil but fast max Fire Rate, ideal for mid-range burst suppression.",
+  "source": "oncehumandb.com"
+ },
+ "kv-sbr-little-jaws": {
+  "mag": 30,
+  "critRate": "10%",
+  "critDmg": "30%",
+  "weakspotDmg": "45%",
+  "range": 24,
+  "rangeEff": "14m",
+  "reload": 56,
+  "reloadSec": "1.9s",
+  "mobility": 66,
+  "ads": "0.2s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "14m / 39m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Articulated Action I",
+    "qty": 1
+   },
+   {
+    "name": "Folding Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Short Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "KV-SBR SMG, blazing fast fire rate, perfect for high-octane close-quarters combat",
+  "source": "oncehumandb.com"
+ },
+ "pdw90-holographic-resonance": {
+  "mag": 50,
+  "critRate": "8%",
+  "critDmg": "45%",
+  "weakspotDmg": "30%",
+  "range": 36,
+  "rangeEff": "17m",
+  "reload": 16,
+  "reloadSec": "2.2s",
+  "mobility": 77,
+  "ads": "0.18s",
+  "ammo": "SMG Ammo",
+  "fireMode": "Full-Auto",
+  "perkSlots": 6,
+  "falloff": "17m / 47m / 30%",
+  "bench": "Weapon Bench",
+  "craft": [
+   {
+    "name": "SMG Receiver I",
+    "qty": 1
+   },
+   {
+    "name": "Legendary Blowback Action I",
+    "qty": 1
+   },
+   {
+    "name": "Telescoping Stock I",
+    "qty": 1
+   },
+   {
+    "name": "Standard Barrel I",
+    "qty": 1
+   }
+  ],
+  "overrides": [
+   "SMG DMG Boost",
+   "Precise Shot",
+   "Automatic Weapon Enhancement",
+   "Anti-Phase",
+   "Anti-Phase: SMG"
+  ],
+  "description": "The PDW90 SMG boasts rapid fire and a large-capacity magazine, with a compact design perfect for close-quarters combat.",
+  "source": "oncehumandb.com"
+ },
+ "g17-hazardous-object": {
+  "critRate": "8%",
+  "critDmg": "28%",
+  "weakspotDmg": "55%",
+  "ammo": "Pistol Ammo",
+  "effectName": "Hazardous Object (Unstable Bomber)",
+  "effect": "Toucher un ennemi donne 20% de chance de déclencher Unstable Bomber. Temps de recharge -40% ; le rechargement est remplacé par un lancer de l'arme qui consomme toutes les munitions et inflige des dégâts Blast dans 3 m égaux à 50% + munitions consommées × 18% de l'Intensité PSI (max 480%). Profite des bonus de dégâts/portée d'Unstable Bomber, et t'inflige 40% des dégâts. Le lancer rend 75% des munitions (75% de chance) ou 25% (25% de chance). Dégâts et portée d'Unstable Bomber +10% pendant 10 s à chaque dégât, jusqu'à +50%.",
+  "source": "wikily.gg",
+  "note": "Stats détaillées OHDB (chargeur, recharge, recette) non récupérées : fiche non indexée.",
+  "effectEn": "Hitting an enemy gives a 20% chance to trigger Unstable Bomber. Reload time -40%; reloading is replaced by throwing the weapon, consuming all ammo and dealing Blast DMG within 3m equal to 50% + ammo consumed × 18% of Psi Intensity (max 480%). Benefits from Unstable Bomber DMG/range bonuses and deals 40% of the damage to you. The throw returns 75% of the ammo (75% chance) or 25% (25% chance). Unstable Bomber DMG and range +10% for 10s on each damage instance, up to +50%."
+ },
+ "the-fabled-masamune": {
+  "effectName": "Masamune",
+  "effect": "Quand la durabilité de l'arme est au-dessus de 50%, chaque 1% supplémentaire donne dég crit +3% (max +120%). En dessous de 20%, chaque 1% de moins donne Attaque -2%. L'attaque rapide juste après avoir dégainé donne Attaque +30% et un coup critique garanti (inefficace contre les Métas), une fois toutes les 15 s ; si elle touche, le bonus persiste 5 s en décroissant.",
+  "source": "wikily.gg / once-human.fandom.com",
+  "note": "Non craftable dans le scénario Deviation. Plan obtenable pour 8000 Starchrom, ou dans les Monoliths et Silos.",
+  "effectEn": "While weapon durability is above 50%, every additional 1% grants Crit DMG +3% (max +120%). Below 20%, every 1% less grants Attack -2%. A quick attack right after drawing grants Attack +30% and a guaranteed Crit (ineffective against Metas), once every 15s; if it hits, the bonus persists for 5s while decaying."
+ },
+ "de-50-wildfire": {
+  "effectName": "The Bull's Eye",
+  "effect": "60% de chance d'appliquer The Bull's Eye à chaque coup (cible marquée, Vulnérabilité +8% pendant 12 s). 80% de chance de propager The Bull's Eye à 1 ennemi dans 15 m, dég d'arme +25% pendant 10 s. Toucher le point faible d'un ennemi marqué donne Attaque +3% pendant 10 s (max 3 stacks).",
+  "source": "bluestacks.com",
+  "effectEn": "60% chance to apply The Bull's Eye on each hit (marked target, Vulnerability +8% for 12s). 80% chance to spread The Bull's Eye to 1 enemy within 15m, Weapon DMG +25% for 10s. Hitting a marked enemy's Weakspot grants Attack +3% for 10s (max 3 stacks)."
+ },
+ "socr-outsider": {
+  "effectName": "Power Surge",
+  "effect": "35% de chance de déclencher Power Surge à chaque coup. Les coups critiques augmentent la chance de déclenchement de +30% pendant 3 s. Chance de déclenchement Power Surge +30%.",
+  "source": "bluestacks.com",
+  "effectEn": "35% chance to trigger Power Surge on each hit. Crit hits increase the trigger chance by +30% for 3s. Power Surge trigger chance +30%."
+ },
+ "recurve-crossbow": {
+  "effectName": "The Bull's Eye",
+  "effect": "Toucher un point faible applique The Bull's Eye : toutes les armes ont taux crit +15% contre la cible marquée pendant 10 s (une fois par cible toutes les 15 s). Considérée comme la meilleure arme secondaire pour la plupart des builds.",
+  "source": "bluestacks.com",
+  "effectEn": "Hitting a Weakspot applies The Bull's Eye: all weapons gain Crit Rate +15% against the marked target for 10s (once per target every 15s). Considered the best secondary weapon for most builds."
+ },
+ "db12-backfire": {
+  "effectName": "Frost Vortex",
+  "effect": "Toucher 5 fois déclenche Frost Vortex (zone de 4,5 m qui piège les ennemis et inflige 30% de l'Intensité PSI en dég de statut par seconde pendant 4 s). Toucher 1 fois un ennemi dans le vortex le gèle 3 s (recharge 4 s). Dég +60% contre les ennemis gelés.",
+  "source": "bluestacks.com",
+  "effectEn": "Hitting 5 times triggers Frost Vortex (4.5m area that traps enemies and deals 30% Psi Intensity Status DMG per second for 4s). Hitting an enemy inside the vortex once freezes it for 3s (cooldown 4s). DMG +60% against frozen enemies."
+ }
+}
