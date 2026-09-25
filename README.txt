@@ -1,9 +1,9 @@
-ONCE HUMAN — Planificateur de build (version 1.6 — 25 septembre 2026)
+ONCE HUMAN — Planificateur de build (version 1.6 — 24 septembre 2026)
 =====================================================================
 À déposer dans : C:\Users\Moana\Documents\CLAUDE\ONCE_HUMAN
 
 FICHIERS
-  build_planner.html      NOUVEAU (v1.6, 25 sept. 2026) : onglet « ⚙ Optimiseur ». Tu choisis une arme et un
+  build_planner.html      NOUVEAU (v1.6, 24 sept. 2026) : onglet « ⚙ Optimiseur ». Tu choisis une arme et un
                           objectif (DPS, dégâts crit, taux crit, point faible, élémentaire/statut, mécanique de
                           l'arme, survie), tu cliques « Optimiser » : le moteur lit la mécanique de l'arme
                           (Shrapnel, Brûlure, Rebond, Dans le mille, Tireur rapide, Lutte retranchée, Surtension,

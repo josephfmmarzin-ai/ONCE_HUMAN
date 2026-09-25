@@ -1,4 +1,4 @@
-ONCE HUMAN — Build planner (version 1.6 — September 25, 2026)
+ONCE HUMAN — Build planner (version 1.6 — September 24, 2026)
 ==============================================================
 Drop the folder in: C:\Users\Moana\Documents\CLAUDE\ONCE_HUMAN
 
