@@ -20,6 +20,10 @@ Open `build_planner.html` in Chrome, Edge or Firefox. Nothing to install.
 
 Choisir une arme et un objectif (DPS, dégâts crit, taux crit, point faible, élémentaire/statut, mécanique de l'arme, survie) puis « Optimiser ». Le moteur lit la mécanique de l'arme (Shrapnel, Brûlure, Rebond, Dans le mille, Tireur rapide, Lutte retranchée, Surtension, Vortex de givre, Bombe instable), son type et ses stats de base, et calcule sets + pièce unique, mods + suffixes, peaux, déviation, overrides et nourriture, avec la justification de chaque choix.
 
+**Style de PV** (v1.7) : Normal, Semi-low life (≤ 50 % PV) ou Low life / Lunar (< 30 % PV). Les effets liés aux PV et les suffixes / peaux Lunar sont pris en compte selon le style — les builds Lunar sont en général les plus destructeurs.
+
+**Sets de peaux** (v1.7) : 4 peaux de la même famille (Soaring Leap, Wolf Pack, Stag…) — source communautaire.
+
 Moteur de score (effets du jeu pondérés), pas la formule exacte du jeu : les gains affichés sont indicatifs.
 
 ## Régénérer les fichiers / Rebuild
@@ -31,8 +35,10 @@ python generate.py   # build_planner.html + Excel FR/EN
 python gen_pdf.py    # guides PDF FR/EN
 ```
 
-Structure : `data/*.json` (données brutes, oncehumandb.com), `data/details/*.json` (compléments : stats, sets, pièces uniques, déviations, builds préchargés), `template.html` + `optimizer.js` (interface), `lib_data.py` (fusion des données).
+Structure : `data/*.json` (données de base, oncehumandb.com), `data/metabuilds/` (export meta-builds.net, source à jour), `data/details/*.json` (compléments : sets, pièces uniques, déviations FR, sets de peaux, builds préchargés), `template.html` + `optimizer.js` (interface, injectés par `generate.py`), `lib_data.py` + `mb_merge.py` (fusion des données).
+
+Mise à jour : enregistrer https://meta-builds.net/api/get/allData dans `data/metabuilds/allData.json`, puis relancer les deux scripts.
 
 ## Sources
 
-oncehumandb.com (données extraites des fichiers du jeu), once-human.fandom.com, wikily.gg, guides communautaires. Once Human est une marque de Starry Studio / NetEase ; projet de fan non officiel.
+meta-builds.net (base à jour, jeu v3.0.5), oncehumandb.com (données extraites des fichiers du jeu), once-human.fandom.com, wikily.gg, guides communautaires. Once Human est une marque de Starry Studio / NetEase ; projet de fan non officiel.

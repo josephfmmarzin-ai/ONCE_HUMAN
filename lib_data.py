@@ -121,11 +121,30 @@ def build():
         x["rarityFr"] = RARITY_FR.get(x["rarity"], x["rarity"])
 
     presets = load_details("presets.json") or []
-    return {"weapons": weapons, "armor": armor, "sets": list(sets.values()), "mods": mods, "deviations": deviations,
-            "cradle": cradle, "food": food, "calibrations": calibrations, "skins": skins, "presets": presets}
+    D = {"weapons": weapons, "armor": armor, "sets": list(sets.values()), "mods": mods, "deviations": deviations,
+         "cradle": cradle, "food": food, "calibrations": calibrations, "skins": skins, "presets": presets}
+    # Mise à jour depuis meta-builds.net (si data/metabuilds/allData.json est présent)
+    import mb_merge
+    mb_merge.merge(D, os.path.join(DATA, "details"))
+    for x in D["weapons"]:
+        x["typeFr"] = WTYPE_FR.get(x["type"], x["type"])
+    for k in ("weapons", "armor", "deviations", "skins", "calibrations"):
+        for x in D[k]:
+            if x.get("rarity"):
+                x["rarityFr"] = RARITY_FR.get(x["rarity"], x["rarity"])
+    for x in D["armor"]:
+        x["slotFr"] = SLOT_FR.get(x["slot"], x["slot"])
+    for x in D["deviations"]:
+        x["typeFr"] = DEV_FR.get(x["type"], x["type"])
+    for m in D["mods"]:
+        m["slotFr"] = SLOT_FR.get(m["slot"], "Toutes les armures" if m["slot"] == "All" else m["slot"])
+        m["categoryFr"] = "Mod d'arme" if m["category"] == "Weapon Mod" else "Mod d'armure"
+        m["rarityFr"] = RARITY_FR.get(m.get("rarity"), m.get("rarity"))
+    return D
 
 
 if __name__ == "__main__":
     d = build()
     for k, v in d.items():
-        print(k, len(v))
+        print(k, len(v) if isinstance(v, (list, dict)) else v)
+    print(json.dumps(d.get("meta", {}), ensure_ascii=False, indent=1))

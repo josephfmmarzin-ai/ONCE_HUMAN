@@ -1,6 +1,26 @@
-ONCE HUMAN — Planificateur de build (version 1.6 — 24 septembre 2026)
+ONCE HUMAN — Planificateur de build (version 1.7 — 24 septembre 2026)
 =====================================================================
 À déposer dans : C:\Users\Moana\Documents\CLAUDE\ONCE_HUMAN
+
+NOUVEAUTÉS v1.7 (24 sept. 2026)
+  - Base de données mise à jour depuis meta-builds.net (jeu v3.0.5) : 73 armes à jour (+6 nouvelles :
+    AUG Electron Cloud, Compound Bow The Burden of Betrayal, KAM, QBJ97, SN700, SN700 Finale), 158 pièces
+    d'armure (+16 nouvelles dont le set Ghost Link), 19 sets, 793 mods × suffixes (Lunar, Crescent,
+    Phantasmal, Mirror, Wild, Downstar, Aero, Resonance, Battle…), 73 déviations (+7) avec leurs variantes,
+    57 overrides Cradle de la saison, 36 calibrations, 53 peaux avec leur effet selon la pièce d'armure.
+    Les éléments qui n'existent plus dans la base à jour restent visibles avec l'étiquette « ancien ».
+  - Optimiseur : nouveau choix « Style de PV » — Normal / Semi-low life (≤ 50 % PV) / Low life - Lunar
+    (< 30 % PV). Les effets « si PV au-dessus / en dessous de X % », « double sous 30 % » et « par tranche
+    de PV perdus » sont activés ou coupés selon le style ; en low life, les suffixes Lunar et les peaux
+    Lunar sont privilégiés, les PV max comptent moins, la réduction de dégâts et les boucliers davantage.
+    Valeurs des suffixes Lunar / Crescent / Phantasmal : estimations (non publiées par le jeu).
+  - Sets de peaux : 4 pièces avec des peaux de la même famille donnent un bonus (Cerf, Meute, Force de
+    l'ours, Bond aérien « Soaring Leap », Bois flotté, Percuteur, Effet de troupeau, Ombre du renard).
+    Source communautaire, à vérifier en jeu. L'optimiseur choisit la peau de chaque pièce et le set.
+  - « Mon build » : une peau par pièce d'armure (au lieu d'une seule), bonus de set de peaux affiché.
+  - Excel : onglet Peaux détaillé par pièce + onglet « Sets de peaux ». PDF : section peaux refaite.
+  - Mise à jour future : relancer le téléchargement de https://meta-builds.net/api/get/allData dans
+    data/metabuilds/allData.json puis « python generate.py » et « python gen_pdf.py ».
 
 FICHIERS
   build_planner.html      NOUVEAU (v1.6, 24 sept. 2026) : onglet « ⚙ Optimiseur ». Tu choisis une arme et un

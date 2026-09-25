@@ -13,6 +13,8 @@ D = build()
 # ---------------------------------------------------------------- HTML
 tpl = open(os.path.join(HERE, "template.html"), encoding="utf-8").read()
 payload = json.dumps(D, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+opt = open(os.path.join(HERE, "optimizer.js"), encoding="utf-8").read()
+tpl = tpl.replace("/*__OPTIMIZER__*/", opt)          # moteur de l'optimiseur (source unique : optimizer.js)
 open(os.path.join(OUT, "build_planner.html"), "w", encoding="utf-8").write(tpl.replace("__DATA__", payload))
 print("HTML ok")
 
@@ -22,6 +24,12 @@ def gen_xlsx(LANG):
     RF = {"legendary": "Legendary", "epic": "Epic", "rare": "Rare", "uncommon": "Uncommon", "common": "Common"}
     R = lambda x: x["rarityFr"] if LANG == "fr" else RF.get(x.get("rarity"), "")
     SH = {fr: (fr if LANG == "fr" else en) for fr, en in [("Armes","Weapons"),("Armures","Armor"),("Sets","Sets"),("Mods","Mods"),("Déviations","Deviations"),("Overrides","Overrides"),("Calibrations","Calibrations"),("Nourriture","Food"),("Peaux","Skins")]}
+    SH_Armes = SH["Armes"]
+    SH_Armures = SH["Armures"]
+    SH_Mods = SH["Mods"]
+    SH_Dviations = SH["Déviations"]
+    SH_Overrides = SH["Overrides"]
+    SH_Nourriture = SH["Nourriture"]
     # ---------------------------------------------------------------- EXCEL
     FONT = "Arial"
     RAR_COL = {"legendary": "E39B2D", "epic": "B06BF0", "rare": "4F9BE8", "uncommon": "6DBE5A", "common": "9AA3AB"}
@@ -115,9 +123,15 @@ def gen_xlsx(LANG):
     sheet(SH["Nourriture"], [L("Nom","Name"), L("Catégorie","Category"), L("Rareté","Rarity"), L("Poids (kg)","Weight (kg)"), L("Effet","Effect"), L("Fiche","Page"), "Image"],
           [[x["name"], x["category"], R(x), x.get("weight"), x["effect"], x["url"], x["imageUrl"]] for x in sorted(D["food"], key=lambda x: x["name"])],
           [30, 12, 12, 9, 80, 9, 9], rarity_col=2, link_cols=(5, 6))
-    sheet(SH["Peaux"], [L("Nom","Name"), L("Rareté","Rarity"), L("Effet","Effect"), L("Fiche","Page"), "Image"],
-          [[x["name"], R(x), x["effect"], x["url"], x["imageUrl"]] for x in sorted(D["skins"], key=lambda x: x["name"])],
-          [30, 12, 40, 9, 9], rarity_col=1, link_cols=(3, 4))
+    HS = {h["family"]: h for h in D.get("hideSets", [])}
+    SL6 = [("Helmet","Casque"),("Mask","Masque"),("Top","Haut"),("Gloves","Gants"),("Bottoms","Bas"),("Shoes","Chaussures")]
+    sheet(SH["Peaux"], [L("Nom","Name"), L("Rareté","Rarity"), L("Set de peaux (×4)","Hide set (×4)")] + [L(fr, en) for en, fr in SL6] + [L("Fiche","Page"), "Image", L("Statut","Status")],
+          [[x["name"], R(x), (L(HS[x["family"]]["fr"], HS[x["family"]]["name"]) if x.get("family") in HS else "")] + [(x.get("slotEffects") or {}).get(en, "") for en, _ in SL6]
+           + [x["url"], x["imageUrl"], L("ancien", "legacy") if x.get("legacy") else ""] for x in sorted(D["skins"], key=lambda x: x["name"])],
+          [26, 12, 18, 34, 34, 34, 34, 34, 34, 9, 9, 9], rarity_col=1, link_cols=(9, 10))
+    sheet(L("Sets de peaux", "Hide sets"), [L("Set", "Set"), L("Nom en jeu", "In-game name"), L("Famille de peaux", "Hide family"), L("Pièces", "Pieces"), L("Effet", "Effect"), L("Peaux concernées", "Hides")],
+          [[L(h["fr"], h["name"]), h["name"], h["families"], h["pieces"], L(h["effect"], h["effectEn"]), ", ".join(sorted(x["name"] for x in D["skins"] if x.get("family") == h["family"] and not x.get("legacy")))] for h in D.get("hideSets", [])],
+          [20, 22, 16, 8, 60, 70])
 
     # ---------------- Feuille Build (interactive, listes déroulantes + formules)
     ws = wb.create_sheet("Build", 0)
@@ -141,9 +155,9 @@ def gen_xlsx(LANG):
     for c in ws[4]:
         c.font, c.fill = HEAD_FONT, HEAD_FILL
 
-    dv_w = DataValidation(type="list", formula1=f"={SH["Armes"]}!$A$2:$A${nW}", allow_blank=True)
-    dv_a = DataValidation(type="list", formula1=f"={SH["Armures"]}!$A$2:$A${nA}", allow_blank=True)
-    dv_m = DataValidation(type="list", formula1=f"={SH["Mods"]}!$A$2:$A${nM}", allow_blank=True)
+    dv_w = DataValidation(type="list", formula1=f"={SH_Armes}!$A$2:$A${nW}", allow_blank=True)
+    dv_a = DataValidation(type="list", formula1=f"={SH_Armures}!$A$2:$A${nA}", allow_blank=True)
+    dv_m = DataValidation(type="list", formula1=f"={SH_Mods}!$A$2:$A${nM}", allow_blank=True)
     for dv in (dv_w, dv_a, dv_m):
         ws.add_data_validation(dv)
 
@@ -158,21 +172,21 @@ def gen_xlsx(LANG):
         dv_m.add(ws.cell(r, 3))
         if kind == "w":
             dv_w.add(ws.cell(r, 2))
-            ws.cell(r, 4, f'=IF(B{r}="","",INDEX({SH["Armes"]}!$E$2:$E${nW},MATCH(B{r},{SH["Armes"]}!$A$2:$A${nW},0)))')
-            ws.cell(r, 5, f'=IF(B{r}="","",INDEX({SH["Armes"]}!$F$2:$F${nW},MATCH(B{r},{SH["Armes"]}!$A$2:$A${nW},0)))')
-            ws.cell(r, 6, f'=IF(B{r}="","",INDEX({SH["Armes"]}!$G$2:$G${nW},MATCH(B{r},{SH["Armes"]}!$A$2:$A${nW},0)))')
-            ws.cell(r, 7, f'=IF(B{r}="","",INDEX({SH["Armes"]}!$O$2:$O${nW},MATCH(B{r},{SH["Armes"]}!$A$2:$A${nW},0))&"")')
+            ws.cell(r, 4, f'=IF(B{r}="","",INDEX({SH_Armes}!$E$2:$E${nW},MATCH(B{r},{SH_Armes}!$A$2:$A${nW},0)))')
+            ws.cell(r, 5, f'=IF(B{r}="","",INDEX({SH_Armes}!$F$2:$F${nW},MATCH(B{r},{SH_Armes}!$A$2:$A${nW},0)))')
+            ws.cell(r, 6, f'=IF(B{r}="","",INDEX({SH_Armes}!$G$2:$G${nW},MATCH(B{r},{SH_Armes}!$A$2:$A${nW},0)))')
+            ws.cell(r, 7, f'=IF(B{r}="","",INDEX({SH_Armes}!$O$2:$O${nW},MATCH(B{r},{SH_Armes}!$A$2:$A${nW},0))&"")')
         else:
             dv_a.add(ws.cell(r, 2))
             armor_rows.append(r)
-            ws.cell(r, 4, f'=IF(B{r}="","",INDEX({SH["Armures"]}!$E$2:$E${nA},MATCH(B{r},{SH["Armures"]}!$A$2:$A${nA},0)))')
-            ws.cell(r, 7, f'=IF(B{r}="","",INDEX({SH["Armures"]}!$B$2:$B${nA},MATCH(B{r},{SH["Armures"]}!$A$2:$A${nA},0))&" — "&INDEX({SH["Armures"]}!$G$2:$G${nA},MATCH(B{r},{SH["Armures"]}!$A$2:$A${nA},0)))')
+            ws.cell(r, 4, f'=IF(B{r}="","",INDEX({SH_Armures}!$E$2:$E${nA},MATCH(B{r},{SH_Armures}!$A$2:$A${nA},0)))')
+            ws.cell(r, 7, f'=IF(B{r}="","",INDEX({SH_Armures}!$B$2:$B${nA},MATCH(B{r},{SH_Armures}!$A$2:$A${nA},0))&" — "&INDEX({SH_Armures}!$G$2:$G${nA},MATCH(B{r},{SH_Armures}!$A$2:$A${nA},0)))')
         r += 1
 
     # Emplacements sans mod
-    dv_d = DataValidation(type="list", formula1=f"={SH["Déviations"]}!$A$2:$A${len(D['deviations'])+1}", allow_blank=True)
-    dv_o = DataValidation(type="list", formula1=f"={SH["Overrides"]}!$A$2:$A${len(D['cradle'])+1}", allow_blank=True)
-    dv_f = DataValidation(type="list", formula1=f"={SH["Nourriture"]}!$A$2:$A${len(D['food'])+1}", allow_blank=True)
+    dv_d = DataValidation(type="list", formula1=f"={SH_Dviations}!$A$2:$A${len(D['deviations'])+1}", allow_blank=True)
+    dv_o = DataValidation(type="list", formula1=f"={SH_Overrides}!$A$2:$A${len(D['cradle'])+1}", allow_blank=True)
+    dv_f = DataValidation(type="list", formula1=f"={SH_Nourriture}!$A$2:$A${len(D['food'])+1}", allow_blank=True)
     for dv in (dv_d, dv_o, dv_f):
         ws.add_data_validation(dv)
     for label, dv, sh, ncol in ((L("Déviation","Deviation"), dv_d, SH["Déviations"], "D"), ("Cradle override", dv_o, SH["Overrides"], "C"), (L("Nourriture 1","Food 1"), dv_f, SH["Nourriture"], "E"), (L("Nourriture 2","Food 2"), dv_f, SH["Nourriture"], "E")):
@@ -190,7 +204,7 @@ def gen_xlsx(LANG):
     for rr in range(5, 13):
         ws.cell(r, 1, f'=IF(C{rr}="","",A{rr})')
         ws.cell(r, 2, f'=IF(C{rr}="","",C{rr})')
-        ws.cell(r, 7, f'=IF(C{rr}="","",INDEX({SH["Mods"]}!$F$2:$F${nM},MATCH(C{rr},{SH["Mods"]}!$A$2:$A${nM},0)))')
+        ws.cell(r, 7, f'=IF(C{rr}="","",INDEX({SH_Mods}!$F$2:$F${nM},MATCH(C{rr},{SH_Mods}!$A$2:$A${nM},0)))')
         r += 1
 
     # Résumé
@@ -209,9 +223,9 @@ def gen_xlsx(LANG):
     r += 1
     set_first = r
     for i, ar in enumerate(armor_rows):
-        ws.cell(r, 1, f'=IF(B{ar}="","",INDEX({SH["Armures"]}!$B$2:$B${nA},MATCH(B{ar},{SH["Armures"]}!$A$2:$A${nA},0)))')
+        ws.cell(r, 1, f'=IF(B{ar}="","",INDEX({SH_Armures}!$B$2:$B${nA},MATCH(B{ar},{SH_Armures}!$A$2:$A${nA},0)))')
         ws.cell(r, 2, f'=IF(A{r}="","",COUNTIF($A${set_first}:$A${set_first+len(armor_rows)-1},A{r}))')
-        ws.cell(r, 3, f'=IF(A{r}="","",IFERROR(INDEX({SH["Armures"]}!$H$2:$H${nA},MATCH(B{ar},{SH["Armures"]}!$A$2:$A${nA},0))&"",""))')
+        ws.cell(r, 3, f'=IF(A{r}="","",IFERROR(INDEX({SH_Armures}!$H$2:$H${nA},MATCH(B{ar},{SH_Armures}!$A$2:$A${nA},0))&"",""))')
         r += 1
     ws.cell(r, 1, L("Note : DPS théorique = dégâts × cadence ÷ 60 (sans crit ni effets). Nom du set répété par pièce ; le nombre indique combien de pièces de ce set tu portes.","Note: theoretical DPS = damage × fire rate ÷ 60 (no crit or effects). Set name repeated per piece; the number shows how many pieces of that set you wear.")).font = Font(name=FONT, italic=True, size=9, color="666666")
 

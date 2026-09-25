@@ -1,6 +1,18 @@
-ONCE HUMAN — Build planner (version 1.6 — September 24, 2026)
+ONCE HUMAN — Build planner (version 1.7 — September 24, 2026)
 ==============================================================
 Drop the folder in: C:\Users\Moana\Documents\CLAUDE\ONCE_HUMAN
+
+WHAT'S NEW in v1.7 (Sept 24, 2026)
+  - Database updated from meta-builds.net (game v3.0.5): 73 weapons (+6 new), 158 armor pieces (+16 incl. the
+    Ghost Link set), 19 sets, 793 mods × suffixes (Lunar, Crescent, Phantasmal, Mirror, Wild, Downstar, Aero…),
+    73 deviations (+7) with their variants, 57 current Cradle overrides, 36 calibrations, 53 hides with their
+    effect per armor piece. Items no longer in the up-to-date database are tagged « legacy ».
+  - Optimizer: new « HP style » choice — Normal / Semi-low life (≤ 50% HP) / Low life - Lunar (< 30% HP).
+    “HP above / below X%”, “doubles below 30%” and “per HP lost” effects are switched on or off; low life
+    favours Lunar suffixes and Lunar hides. Lunar / Crescent / Phantasmal suffix values are estimates.
+  - Hide sets: 4 pieces with hides of the same family give a bonus (Stag, Wolf Pack, Power of Bears,
+    Soaring Leap, Driftwood in the Water, Impacter, Herd Effect, Fox Shadow) — community source, check in game.
+  - « My build »: one hide per armor piece, hide set bonus shown. Excel: detailed Skins sheet + « Hide sets ».
 
 FILES
   build_planner.html        NEW (v1.6): « ⚙ Optimizer » tab. Pick a weapon and a goal (DPS, crit damage, crit rate,

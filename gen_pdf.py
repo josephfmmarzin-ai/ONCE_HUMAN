@@ -69,7 +69,7 @@ def gen(LANG):
         canv.setFillColor(BG); canv.rect(0, A4[1] - 12 * mm, A4[0], 12 * mm, fill=1, stroke=0)
         canv.setFillColor(STAR); canv.setFont("DVB", 9); canv.drawString(14 * mm, A4[1] - 8 * mm, L("ONCE HUMAN — Guide de référence des builds", "ONCE HUMAN — Build reference guide"))
         canv.setFillColor(colors.HexColor("#a7b0b8")); canv.setFont("DV", 8); canv.drawRightString(A4[0] - 14 * mm, A4[1] - 8 * mm, doc.section)
-        canv.setFillColor(INK2); canv.drawCentredString(A4[0] / 2, 8 * mm, L(f"Page {doc.page}  ·  données oncehumandb.com / once-human.fandom.com / wikily.gg  ·  v1.6 — 24 sept. 2026", f"Page {doc.page}  ·  data oncehumandb.com / once-human.fandom.com / wikily.gg  ·  v1.6 — Sep 24, 2026"))
+        canv.setFillColor(INK2); canv.drawCentredString(A4[0] / 2, 8 * mm, L(f"Page {doc.page}  ·  données meta-builds.net (jeu v3.0.5) / oncehumandb.com / fandom  ·  v1.7 — 24 sept. 2026", f"Page {doc.page}  ·  data meta-builds.net (game v3.0.5) / oncehumandb.com / fandom  ·  v1.7 — Sep 24, 2026"))
         canv.restoreState()
 
 
@@ -98,7 +98,7 @@ def gen(LANG):
     st += [Spacer(1, 70 * mm), Paragraph("ONCE HUMAN", S["cover1"]), Paragraph(L("Guide de référence des builds", "Build reference guide"), S["cover2"]), Spacer(1, 30 * mm),
            Paragraph(L("Builds recommandés · Armes légendaires · Sets d'armure · Pièces uniques · Déviations · Overrides · Nourriture", "Recommended builds · Legendary weapons · Armor sets · Key Armor · Deviations · Overrides · Food"), S["cover3"]), Spacer(1, 4 * mm),
            Paragraph(L(f"{len(D['weapons'])} armes · {len(D['armor'])} pièces d'armure · {len(D['sets'])-1} sets · {len(D['mods'])} mods · {len(D['deviations'])} déviations · {len(D['cradle'])} overrides", f"{len(D['weapons'])} weapons · {len(D['armor'])} armor pieces · {len(D['sets'])-1} sets · {len(D['mods'])} mods · {len(D['deviations'])} deviations · {len(D['cradle'])} overrides"), S["cover3"]),
-           Spacer(1, 4 * mm), Paragraph(L("Version 1.6 — 24 septembre 2026 — compagnon papier de build_planner.html et Once_Human_Builds_FR.xlsx", "Version 1.6 — September 24, 2026 — paper companion of build_planner.html and Once_Human_Builds_EN.xlsx"), S["cover3"])]
+           Spacer(1, 4 * mm), Paragraph(L("Version 1.7 — 24 septembre 2026 — compagnon papier de build_planner.html et Once_Human_Builds_FR.xlsx", "Version 1.7 — September 24, 2026 — paper companion of build_planner.html and Once_Human_Builds_EN.xlsx"), S["cover3"])]
     from reportlab.platypus import NextPageTemplate
     st.insert(0, NextPageTemplate("body"))
     st.append(PageBreak())
@@ -158,6 +158,8 @@ def gen(LANG):
                  (L("Mobilité","Mobility"), w["mobility"]), (L("Visée","ADS"), w["ads"]), (L("Munitions","Ammo"), w["ammo"])]
         stats = [(k, v) for k, v in stats if v not in (None, "")]
         cells = [Paragraph(f"<font color='#555f68'>{esc(k)}</font><br/><b>{esc(v)}</b>", S["small"]) for k, v in stats]
+        if not cells:
+            cells = [Paragraph(L("Stats non publiées", "Stats not published"), S["small"])]
         while len(cells) % 6:
             cells.append("")
         grid = Table([cells[i:i + 6] for i in range(0, len(cells), 6)], colWidths=[W / 6] * 6)
@@ -225,7 +227,7 @@ def gen(LANG):
     # ---------------- 6. Overrides
     st.append(Paragraph("6. Cradle Overrides", S["h1"]))
     for sty in sorted(set(c["style"] for c in D["cradle"])):
-        LL = sorted([c for c in D["cradle"] if c["style"] == sty], key=lambda c: c["name"])
+        LL = sorted([c for c in D["cradle"] if c["style"] == sty and (c.get("current") or not any(x.get("current") for x in D["cradle"]))], key=lambda c: c["name"])
         st.append(Paragraph(f"{sty} ({len(LL)})", S["h2"]))
         st.append(table(["Override", L("Effet","Effect")], [[P(c["name"]), P(c["effect"])] for c in LL], [45 * mm, W - 45 * mm]))
     st.append(PageBreak())
@@ -237,7 +239,18 @@ def gen(LANG):
     st.append(Paragraph(L(f"Plats à effet de combat (rares, épiques, légendaires) — {len(food)} sur {len(D['food'])}", f"Combat-effect dishes (rare, epic, legendary) — {len(food)} of {len(D['food'])}"), S["h2"]))
     st.append(table(L(["Plat", "Rareté", "Effet"], ["Dish", "Rarity", "Effect"]), [[P(f["name"]), Paragraph(rar(f), S["small"]), P(f["effect"])] for f in food], [40 * mm, 18 * mm, W - 58 * mm]))
     st.append(Paragraph(L("Peaux d'animaux (attribut ajouté à l'armure fabriquée)", "Animal skins (attribute added to crafted armor)"), S["h2"]))
-    st.append(table(L(["Peau", "Rareté", "Effet"], ["Skin", "Rarity", "Effect"]), [[P(s["name"]), Paragraph(rar(s), S["small"]), P(s["effect"])] for s in sorted(D["skins"], key=lambda s: s["name"])], [45 * mm, 18 * mm, W - 63 * mm]))
+    SLF = {"Helmet": L("Casque", "Helmet"), "Mask": L("Masque", "Mask"), "Top": L("Haut", "Top"), "Gloves": L("Gants", "Gloves"), "Bottoms": L("Bas", "Bottoms"), "Shoes": L("Chaussures", "Shoes")}
+    HS = {h["family"]: h for h in D.get("hideSets", [])}
+    skins = sorted([s for s in D["skins"] if not s.get("legacy")], key=lambda s: s["name"])
+    st.append(Paragraph(L("L'effet d'une peau dépend de la pièce d'armure où elle est utilisée. Les peaux Lunar doublent leur effet sous 30 % de PV (builds low life).",
+                          "A hide's effect depends on the armor piece it is used on. Lunar hides double their effect below 30% HP (low-life builds)."), S["muted"]))
+    st.append(table(L(["Peau", "Set ×4", "Effet selon la pièce"], ["Hide", "Set ×4", "Effect by armor piece"]),
+                    [[P(s["name"]), P(L(HS[s["family"]]["fr"], HS[s["family"]]["name"]) if s.get("family") in HS else "—"), Paragraph("<br/>".join(f"<b>{SLF.get(k, k)}</b> : {esc(v)}" for k, v in (s.get("slotEffects") or {}).items()) or esc(s["effect"]), S["small"])] for s in skins],
+                    [36 * mm, 24 * mm, W - 60 * mm]))
+    st.append(Paragraph(L("Sets de peaux (4 pièces de la même famille)", "Hide sets (4 pieces of the same family)"), S["h2"]))
+    st.append(table(L(["Set", "Famille", "Effet"], ["Set", "Family", "Effect"]), [[P(L(f"{h['fr']} ({h['name']})", h["name"])), P(h["families"]), P(L(h["effect"], h["effectEn"]))] for h in D.get("hideSets", [])], [45 * mm, 30 * mm, W - 75 * mm]))
+    st.append(Paragraph(L("Source : relevés communautaires (sept. 2026), non publiés dans les notes de mise à jour officielles — à vérifier en jeu. On suppose que les variantes (Lunar, Dreamfused, Forest…) comptent pour leur famille.",
+                          "Source: community findings (Sept 2026), not published in the official patch notes — check in game. Variants (Lunar, Dreamfused, Forest…) are assumed to count for their family."), S["muted"]))
     st.append(PageBreak())
 
     # ---------------- 8. Lexique
